@@ -1,4 +1,4 @@
-
+ 
 Reduce response time.
 
 ## Types
@@ -18,7 +18,7 @@ Reduce response time.
 
 ### Extending thread class
 
-![[Pasted image 20240322023900.png]]
+![[./img/Pasted image 20240322023900.png]]
 
 If multiple Threads are waiting to execute then which Thread will execute first is decided by **Thread Scheduler** which is part of JVM. Which algorithm or behavior followed by Thread Scheduler we can't expect exactly, as it is the JVM **vendor dependent**. Hence in multithreading examples *we can't expect exact execution order and exact output*.
 
@@ -228,7 +228,7 @@ public class ThreadPriority {
 
 Output:
 
-```yaml
+```CSS
 Default priority of t1: 5
 Default priority of t2: 5
 Priority of t1 after setting: 1
@@ -257,7 +257,7 @@ public class ThreadPriority {
 
 Output:
 
-```YAML
+```CSS
 Default priority of main thread: 5
 Priority of main thread after setting: 10
 ```

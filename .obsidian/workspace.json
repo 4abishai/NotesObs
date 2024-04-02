@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2281c59625d53142",
+        "id": "825b7859dff1b299",
         "type": "tabs",
         "children": [
           {
-            "id": "ac5dd5dacbce0a6a",
+            "id": "64dd09ba99831401",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Usage",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "0667195683b4df81",
@@ -138,8 +139,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "879f025a0b2e9f84",
+  "active": "64dd09ba99831401",
   "lastOpenFiles": [
+    "OS/Disk Scheduling.md",
+    "Pasted image 20240403005602.png",
+    "Pasted image 20240403005421.png",
+    "Pasted image 20240403005329.png",
+    "OS/Disk Structure.md",
+    "Pasted image 20240403004929.png",
+    "Pasted image 20240403004908.png",
+    "Pasted image 20240403004851.png",
+    "OS/Thrashing.md",
+    "OS/Virtual Memory.md",
+    "OS/img/Pasted image 20240402232308.png",
+    "OS/img/Pasted image 20240403000251.png",
+    "OS/Paging.md",
+    "OS/Demand Paging.md",
+    "OS/Page Replacement.md",
+    "OS/img/Pasted image 20240403002424.png",
+    "OS/img/Pasted image 20240403002220.png",
+    "OS/img",
+    "Java/Synchornization.md",
+    "Java/Multi-tasking.md",
+    "Java/Exception Handling.md",
+    "Deadlock.md",
+    "Java/img/Synchornization.md",
+    "Java/img",
     "Java"
   ]
 }

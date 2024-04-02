@@ -1,5 +1,6 @@
 Demand paging is a memory management technique commonly used in virtual memory systems where *pages are loaded into physical memory only when they are demanded during program execution*. 
 This strategy contrasts with the traditional approach of preloading entire programs or processes into memory before execution begins. With demand paging, the operating system loads pages from secondary storage (such as a hard disk) into physical memory only when they are accessed by the executing program.
+A demand-paging system is similar to a paging system with swapping where processes reside in secondary memory (usually a disk). When we want to execute a process, we swap it into memory. Rather than swapping the entire process into memory, though, we use a lazy swapper. A **lazy swapper** never swaps a page into memory unless that page will be needed.
 
 ### Page level swapping
 
@@ -14,10 +15,11 @@ This strategy contrasts with the traditional approach of preloading entire progr
 - The valid-invalid bit scheme, typically implemented in the page table entries, is used for this purpose.
 - When a page is in memory and valid, the associated bit in the page table entry is set to "valid," indicating that the page is both legal and currently in memory.
 - If a page is not in memory, the valid-invalid bit is set to "invalid," indicating that the page is either not valid (i.e., not in the logical address space of the process) or is valid but currently on disk.
+![[Pasted image 20240402232308.png]]
 
 3. **Handling Page Faults**:
 
-- When a process attempts to access a page that is not currently in memory (a page fault occurs), the operating system responds accordingly.
+- When a process attempts to access a page that is not currently in memory (a **page fault** occurs), the operating system responds accordingly.
 - *If the page is predicted to be needed, the operating system fetches it from disk into an available page frame in physical memory*.
 - If the page is not predicted to be needed or is invalid, the operating system may either simply mark the page as invalid or indicate its location on disk in the page table entry.
 
@@ -26,32 +28,28 @@ This strategy contrasts with the traditional approach of preloading entire progr
 - As the process executes and accesses **memory-resident pages**, execution proceeds normally.
 - Pages that are in memory remain accessible to the process, while pages that are not currently needed remain on disk until they are requested.
 
-In summary, page-level swapping optimizes memory usage by bringing only predicted pages into memory, reducing swap time and physical memory requirements. This technique leverages hardware support, such as the valid-invalid bit scheme, to efficiently manage page swaps and ensure seamless execution of processes.
+In summary, page-level swapping optimizes memory usage by bringing only predicted pages into memory, *reducing swap time* and physical memory requirements. This technique leverages hardware support, such as the valid-invalid bit scheme, to efficiently manage page swaps and ensure seamless execution of processes.
 
 ### Handling Page Faults contd
 
 1. **Check Validity of Reference**:
-
 - Upon encountering a page fault, the operating system checks an **internal table** associated with the process (often kept in the PCB) to determine *whether the memory access was valid or invalid*.
 - If the *reference was invalid* (e.g., accessing memory outside the process's address space), *the process is terminated*. If the reference was valid but the page is not yet in memory, the page fault handling procedure continues.
 
 3. **Page-In Operation**:
-
 - The operating system initiates a page-in operation to bring the page from disk into memory.
 - It *locates a free frame in physical memory* to allocate to the incoming page. This can be done by selecting a frame from the free-frame list maintained by the operating system.
 
 4. **Disk Operation**:
-
 - After allocating a free frame, the operating system schedules a disk operation to *read the desired page* from disk into the allocated frame.
 - This involves initiating a disk I/O request to fetch the page from the disk storage device.
 
 5. **Update Internal Tables**:
-
 - It updates the process's internal table and the page table to indicate that the page is now in memory and is accessible to the process.
 
 6. **Restart Interrupted Instruction**:
-
 - With the required page now in memory, the operating system restarts the instruction that was interrupted by the page fault.
+![[Pasted image 20240403000251.png]]
 
 If further page faults occur, the same procedure is followed to bring in the required pages into memory.
 
@@ -87,7 +85,7 @@ Here's a detailed explanation of how this requirement is met and the challenges 
 1. **Simple Instruction Example**:
    
 - Consider a simple three-address instruction like "ADD the content of A to B, placing the result in C."
-- If a page fault occurs during the execution of this instruction, such as when trying to store the result in C (due to C being in a page not currently in memory), the following steps are taken:
+- If a page fault occurs during the execution of this instruction, such as when trying to store the result in C (if C is a page that's not currently in memory), the following steps are taken:
 	 - Get the desired page, bring it into memory, correct the page table, and restart the instruction.
 	 - Upon restart, *fetch the instruction again, decode it again*, fetch the two operands again (A and B), and then perform the addition again.
 - Despite the repetition, there is minimal redundant work (less than one complete instruction), and the repetition occurs only when a page fault occurs.
