@@ -107,18 +107,19 @@ In summary, the use of a modify bit helps reduce the overhead of page faults by 
 #### LRU Page-Replacement Algorithm:
    
    - LRU replacement associates with each page the time of its last use.
-   - When a page replacement is necessary, LRU selects the page that has not been used for the longest period of time.
+   - When a page replacement is necessary, LRU selects the *page that has not been used for the longest period of time*.
    - LRU effectively looks backward in time to choose the page for replacement, based on recent past usage.
 ![[Pasted image 20240403002424.png]]
 #### Comparison with FIFO:
-   - LRU aims to overcome the shortcomings of FIFO by considering the recent history of page accesses rather than simply replacing the oldest page.
+   - **FIFO**: Replaces *oldest page brought into memory*
+   - **LRU**: Replaces *oldest referenced page present in the memory*
 
 #### Implementation Challenges:
    
    - While LRU is considered a good page-replacement algorithm, its implementation can be challenging, especially in systems without substantial hardware assistance.
    - Two feasible implementations are discussed:
  
-	 - **Counters**: Each page-table entry includes a *time-of-use field*, and a logical clock or *counter* (CPU) is incremented for every memory reference. 
+	 - **Time-of-use field**: Each page-table entry includes a *time-of-use field*, and a logical clock or *counter* (CPU) is incremented for every memory reference. 
        Whenever a reference to a page is made, the *contents of the clock register are copied to the time-of-use field* in the page-table entry for that page.
        The time-of-use field is updated for each page reference, and the *page with the smallest time value is replaced*.
  

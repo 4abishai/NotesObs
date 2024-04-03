@@ -62,7 +62,7 @@ Overall, the hardware implementation of the page table, coupled with TLB caching
 
 ### Impact of Hit Ratio on Access Time:
 
-   - A higher hit ratio results in a lower effective memory access time, as TLB hits are faster than TLB misses.
+   - A higher *hit ratio results in a lower effective memory access time*, as TLB hits are faster than TLB misses.
    - For example, with an 80-percent hit ratio, the effective access time is 120 nanoseconds, representing a 20-percent slowdown compared to accessing memory directly.
    - Conversely, a 99-percent hit ratio leads to an effective access time of 101 nanoseconds, with only a 1 percent slowdown in access time.
    - Therefore, increasing the hit ratio through efficient TLB management techniques is crucial for minimizing memory access latency and improving overall system performance.

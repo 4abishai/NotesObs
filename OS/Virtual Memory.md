@@ -40,7 +40,7 @@ Virtual memory allows a program to execute even if it's not entirely loaded into
    
    - **Increased Concurrent Execution**: Since *each program can occupy less physical memory, more programs can be run concurrently*. This leads to higher CPU utilization and throughput, as more tasks can be processed simultaneously without increasing response time or turnaround time.
    
-   - **Faster Program Execution**: With less I/O needed to load or swap user programs into memory, each program can run faster. This is because only the necessary portions of the program are loaded into memory when needed, reducing the time spent on disk operations.
+   - **Faster Program Execution**: With *less I/O needed to load or swap user programs* into memory, each program can run faster. This is because only the *necessary portions of the program are loaded into memory when needed*, reducing the time spent on disk operations. *Less time is spent loading unnccessary programs into memory*
 
 ### Page sharing
 
