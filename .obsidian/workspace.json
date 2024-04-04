@@ -28,8 +28,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "989d8296c4c82e0a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SQL/SLIDE-2.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -79,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "0667195683b4df81",
@@ -95,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/img/Pasted image 20240403004851.png",
+                "file": "SQL/SLIDE-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/img/Pasted image 20240403004851.png",
+                "file": "SQL/SLIDE-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/img/Pasted image 20240403004851.png"
+                "file": "SQL/SLIDE-2.md"
               }
             }
           }
@@ -156,13 +170,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "879f025a0b2e9f84",
+  "active": "989d8296c4c82e0a",
   "lastOpenFiles": [
+    "SQL/SLIDE-7.md",
+    "SQL/SLIDE-3.md",
+    "SQL/SLIDE-4.md",
+    "SQL/SLIDE-6.md",
+    "SQL/SLIDE-5.md",
+    "OS/img/Pasted image 20240403004851.png",
     "OS/img/Pasted image 20240403004929.png",
     "OS/img/Pasted image 20240403004908.png",
-    "OS/img/Pasted image 20240403004851.png",
     "SQL/SLIDE-2.md",
-    "SQL/SLIDE-3.md",
     "OS/Disk Scheduling.md",
     "SQL",
     "OS/Disk Structure.md",
