@@ -4,45 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "3caccf99ff3003f9",
+        "id": "e9df85f258e87210",
         "type": "tabs",
         "children": [
           {
-            "id": "1f9af1b801527faa",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "OS/img/Pasted image 20240403004851.png"
-              }
-            }
-          },
-          {
-            "id": "78feefbc99472c67",
+            "id": "7a3ddf8f526a4217",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SLIDE-3.md",
-                "mode": "source",
+                "file": "Java/GUI.md",
+                "mode": "preview",
                 "source": false
               }
             }
           },
           {
-            "id": "989d8296c4c82e0a",
+            "id": "b24fc43fc89d053e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SLIDE-2.md",
-                "mode": "preview",
+                "file": "Java/Event.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -92,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "0667195683b4df81",
@@ -109,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SQL/SLIDE-2.md",
+                "file": "Java/Event.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SQL/SLIDE-2.md",
+                "file": "Java/Event.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SQL/SLIDE-2.md"
+                "file": "Java/Event.md"
               }
             }
           }
@@ -170,36 +159,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "989d8296c4c82e0a",
+  "active": "879f025a0b2e9f84",
   "lastOpenFiles": [
-    "SQL/SLIDE-7.md",
+    "Java/GUI.md",
+    "Java/Event.md",
+    "Java/img/Pasted image 20240406141234.png",
+    "OS/Paging.md",
+    "Java/img/Pasted image 20240406142319.png",
+    "Java/img/Pasted image 20240406142155.png",
+    "Java/img/Pasted image 20240406141248.png",
+    "OS/Page Replacement.md",
+    "Java/Exception Handling.md",
+    "Java/Multi-tasking.md",
     "SQL/SLIDE-3.md",
-    "SQL/SLIDE-4.md",
+    "OS/Disk Scheduling.md",
+    "OS/Disk Structure.md",
     "SQL/SLIDE-6.md",
     "SQL/SLIDE-5.md",
+    "SQL/SLIDE-4.md",
+    "SQL/SLIDE-2.md",
+    "SQL/SLIDE-7.md",
     "OS/img/Pasted image 20240403004851.png",
     "OS/img/Pasted image 20240403004929.png",
     "OS/img/Pasted image 20240403004908.png",
-    "SQL/SLIDE-2.md",
-    "OS/Disk Scheduling.md",
     "SQL",
-    "OS/Disk Structure.md",
-    "OS/Page Replacement.md",
     "OS/Thrashing.md",
     "OS/Demand Paging.md",
     "OS/Virtual Memory.md",
-    "OS/Paging.md",
     "OS/img/Pasted image 20240403005602.png",
     "OS/img/Pasted image 20240403005421.png",
     "OS/img/Pasted image 20240403005329.png",
-    "OS/img/Pasted image 20240402232308.png",
-    "OS/img/Pasted image 20240403000251.png",
-    "OS/img/Pasted image 20240403002424.png",
-    "OS/img/Pasted image 20240403002220.png",
     "OS/img",
     "Java/Synchornization.md",
-    "Java/Multi-tasking.md",
-    "Java/Exception Handling.md",
     "Deadlock.md",
     "Java/img/Synchornization.md",
     "Java/img",

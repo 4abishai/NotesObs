@@ -26,7 +26,9 @@ HAVING AVG(age)<(
 );
 ```
 
-**Inline View**: SELECT statement in the FROM clause is used as the data source for the outer SELECT statement.
+**Inline View**: 
+- SELECT statement in the FROM clause is used as the data source for the outer SELECT statement.
+- It allows you to define a temporary result set (or table) that you can use within the outer query, similar to a regular table in the database.
 
 ```sql
 SELECT department_id, avg_salary
@@ -51,13 +53,24 @@ WHERE ROWNUM <= 2;
 
 The query retrieves the top 2 oldest ages from the `Student` table by first sorting the ages in descending order in a subquery and then selecting the top 2 rows from the sorted result in the outer query.
 
+```sql
+SELECT s1.employee_id, s1.employee_name, s1.salary
+FROM salaries s1
+JOIN (
+    SELECT employee_id, AVG(salary) AS avg_salary
+    FROM salaries
+    GROUP BY employee_id
+) s2 ON s1.employee_id = s2.employee_id
+WHERE s1.salary > s2.avg_salary;
+```
+
 ### Multiple-row Subquery
 - It is a subquery that returns more than one row of data.
 - It uses either `IN`, `ALL` or `ANY` operator.
 ```sql
 SELECT roll, name 
 FROM Student 
-WHERE age<ANY(
+WHERE age< ANY(
 	SELECT age 
 	FROM Customer
 );
@@ -71,7 +84,7 @@ WHERE age< IN(
 
 SELECT roll, name 
 FROM Student 
-WHERE age<ALL(
+WHERE age< ALL(
 	SELECT age 
 	FROM Customer
 );
@@ -146,19 +159,21 @@ WHERE salary > (
 ```
 
 In this query, the subquery `(SELECT AVG(salary) FROM salaries s2 WHERE s1.employee_id = s2.employee_id)` is correlated with the outer query `salaries s1`. For each row in the outer query, the subquery calculates the average salary for that specific employee (`s1.employee_id = s2.employee_id`). Then, the outer query selects only those employees whose salary is greater than this average salary.
+This SQL query retrieves the `employee_id`, `employee_name`, and `salary` of employees whose salary is greater than the average salary of all employees with the same `employee_id`.
 
 #### JOIN
 
 Same result can be achieved using a `JOIN` instead of a correlated subquery.
 
 ```sql
-SELECT e.employee_id, e.employee_name, s.salary
-FROM employees e
-JOIN salaries s ON e.employee_id = s.employee_id
+SELECT s1.employee_id, s1.employee_name, s1.salary
+FROM salaries s1
 JOIN (
-    SELECT AVG(salary) AS avg_salary
+    SELECT employee_id, AVG(salary) AS avg_salary
     FROM salaries
-) AS avg_sal ON s.salary > avg_sal.avg_salary;
+    GROUP BY employee_id
+) s2 ON s1.employee_id = s2.employee_id
+WHERE s1.salary > s2.avg_salary;
 ```
 
 ### UPDATE with Subquery
