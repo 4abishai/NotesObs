@@ -1,3 +1,28 @@
+###  Delegation Event Model
+
+The delegation event model in Java is a design pattern used for handling events in a structured and organized way. It is a way to decouple the event source (the object that generates the event) from the event listener (the object that handles the event).
+
+In the delegation event model, the event source has a list of registered event listeners. When an event occurs, the event source notifies all the registered event listeners by calling their respective event handling methods.
+
+**Delegation:** The term "delegation" in the Delegation Event Model refers to the fact that the responsibility for handling events is delegated from the event source to the listener objects. This allows for a clean separation of concerns and promotes modular and reusable code.
+
+Here's how the delegation event model works in Java:
+
+1. **Event Source**: This is the object that generates the event. It has the following responsibilities:
+   - Defines event types as classes that extend the `java.util.EventObject` class.
+   - Maintains a list of event listeners that are interested in receiving the events.
+   - Provides methods to register and unregister event listeners.
+   - Triggers the events by calling the appropriate event handling methods on the registered listeners.
+
+2. **Event Listener**: This is the object that handles the event. It has the following responsibilities:
+   - Implements the appropriate event handling interface, which defines the event handling methods.
+   - Registers itself with the event source to receive the events of interest.
+   - Defines the implementation of the event handling methods.
+
+3. **Event Handling Interface**: This is the interface that defines the event handling methods. It is implemented by the event listener, and it is usually named with the suffix "Listener" (e.g., `ActionListener`, `MouseListener`, `WindowListener`, etc.).
+
+The advantage of the delegation event model is that it promotes a loose coupling between the event source and the event listener. The event source does not need to know the specific implementation of the event listener, and the event listener can be easily added or removed without affecting the event source.
+
 ### Java Event Model
 
 1. **The class that defines an event listener must implement an event listener interface.**
@@ -293,6 +318,7 @@ public class TextBoxMultiBtn extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 int value = Integer.parseInt(valueField.getText());
                 squareField.setText("" + value * value);
+                // squareField.setText(String.valueOf(value * value));
                 rootField.setText("" + Math.sqrt(value));
             }
         });
