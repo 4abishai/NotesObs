@@ -158,7 +158,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6cd51ae2e34612af",
+  "active": "879f025a0b2e9f84",
   "lastOpenFiles": [
     "Java/Abstraction.md",
     "Java/String.md",
@@ -167,11 +167,11 @@
     "Java/Access control mechanism.md",
     "Java/Synchornization.md",
     "Java/Nested Interface.md",
-    "Lambda Expression (Java 8).md",
+    "Java/Lambda Expression (Java 8).md",
     "Java/GUI.md",
     "Java/Event.md",
-    "Model-View-Controller Arch.md",
-    "Pasted image 20240409020145.png",
+    "Java/Model-View-Controller Arch.md",
+    "Java/img/Pasted image 20240409020145.png",
     "Java/Exception Handling.md",
     "Java/Liskov Substitution Principle.md",
     "Java/img/Pasted image 20240409003344.png",
