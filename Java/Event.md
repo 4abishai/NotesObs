@@ -336,6 +336,10 @@ public class TextBoxMultiBtn extends JFrame {
 
 - The constructor `TextBoxMultiBtn(String title)` sets up an `ActionListener` for the "Compute" button, which listens for click events. When the button is clicked, it retrieves the value from `valueField`, calculates the square and square root, and updates the `squareField` and `rootField` text fields with the results.
 
+### Event Dispatch Thread()
+The Event Dispatch Thread (EDT) is a special thread in Swing applications that is responsible for handling events. Swing components need to run on the EDT because Swing is not thread-safe, meaning that Swing components should only be accessed, modified, or queried from the EDT *to avoid potential concurrency issues.*
+
+By ensuring that all interactions with Swing components occur on the EDT, Swing applications can avoid problems such as *race conditions, deadlocks, and inconsistent GUI behavior*. The *EDT processes events sequentially*, which helps maintain the order of events and ensures that updates to the GUI are synchronized and predictable
 #### SwingUtilities.invokeLater() 
 
 The `SwingUtilities.invokeLater()` method is used in Java Swing programming to ensure that any code that interacts with or modifies Swing GUI components is executed on the Event Dispatch Thread (EDT). This is important because Swing components are not thread-safe, and modifying them from outside the EDT can lead to race conditions, deadlocks, and other threading issues.
@@ -356,7 +360,7 @@ SwingUtilities.invokeLater(() -> {
 });
 ```
 
-In this case, the `Runnable` is represented by a lambda expression `() -> { ... }`.
+In this case, the `Runnable` is represented by a [[Lambda Expression (Java 8)]] `() -> { ... }`.
 
 ```java
 //same as
@@ -365,44 +369,3 @@ SwingUtilities.invokeLater(() ->
 ```
 
 As the body consists of a single expression, the curly braces is omitted.
-#### Lambda Expression (Java 8)
-
-Lambda expressions are a concise way of representing an anonymous function or method in Java. They are often used as the argument for a method that expects a **functional interface** (*an interface with a single abstract method*), such as event listeners or functional operations in the Java Stream API.
-
-Used as the argument for a method that expects an interface with a single abstract method.
-
-The general syntax for a lambda expression is:
-
-```java
-(parameters) -> { body }
-```
-
-Here's a breakdown of the syntax:
-
-1. `(parameters)`: This part defines the parameters of the lambda expression. If there is a single parameter, the parentheses can be omitted. If there are no parameters, an empty set of parentheses `()` is required.
-2. `->`: This is the lambda arrow operator, which separates the parameters from the body of the lambda expression.
-3. `{ body }`: This part contains the code or statements that make up the body of the lambda expression. If the body consists of a single expression, the curly braces can be omitted, and the expression will be the result of the lambda.
-
-##### Example
-
-```java
-aButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                int value = Integer.parseInt(valueField.getText());
-                squareField.setText("" + value * value);
-                rootField.setText("" + Math.sqrt(value));
-            }
-        });
-```
-
-```java
-// same as
-aButton.addActionListener((ActionEvent e) -> {
-            int value = Integer.parseInt(valueField.getText());
-            squareField.setText("" + value * value);
-            rootField.setText("" + Math.sqrt(value));
-        });
-```
-
-- `ActionListener` is a functional interface.
-- `MouseListener` is not a functional interface in Java. Therefore, they cannot be replaced with lambda expression. You would typically use an anonymous inner class to implement the `MouseListener` interface when working with GUI components in Java.

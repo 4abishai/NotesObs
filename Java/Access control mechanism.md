@@ -21,6 +21,6 @@ If we make any class constructor private, then we cannot create the
 instance of that class from outside the class. For example:
 ![[Pasted image 20240408014850.png]]
 
-**Note**: 
+**Note**: [[Liskov Substitution Principle]]
 ![[Pasted image 20240408015246.png]]
 ![[Pasted image 20240408015302.png]]

@@ -1,4 +1,5 @@
 ## REFER TO SLIDES
+![[Pasted image 20240409003344.png]]
 ### Swing/AWT Inheritance Hierarchy
 
 ![[Pasted image 20240406141234.png]]
@@ -162,6 +163,7 @@ class ShowJScrollPane {
 
         frame.getContentPane().add(scrollpane);
         frame.pack();
+        frame.setSize(300, 100);
         frame.setVisible(true);
     }
 }
@@ -374,3 +376,14 @@ public class ExtendsJFrame extends JFrame {
 2. **Inheritance vs. Composition**: The second approach uses inheritance to create a custom JFrame subclass. While this can be useful in some cases, it can also lead to tighter coupling and make the code more difficult to extend or modify. The first approach follows the composition principle, which is generally preferred in object-oriented programming.
 3. **Flexibility**: The first approach allows for more flexibility in creating and managing multiple JFrame instances, as each instance is a separate object. In the second approach, each instance of `ExtendsJFrame` creates a new JFrame, which may not be desirable in all cases.
 ### AWT vs Swing
+
+| Feature             | Abstract Window Toolkit (AWT)                                      | Swing                                                                   |
+| ------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| **Architecture**    | Lightweight, uses native OS components                             | Heavyweight, implemented in pure Java                                   |
+| **Look and Feel**   | Native, matches the underlying OS                                  | Consistent look and feel across platforms, uses pluggable look and feel |
+| **Functionality**   | Basic set of GUI components                                        | Richer set of GUI components, including advanced UI elements            |
+| **Event Handling**  | Listener-based event model                                         | Flexible and extensible listener-based event model                      |
+| **Threading Model** | Not thread-safe, should be accessed from the event dispatch thread | Thread-safe, but recommended to access from the event dispatch thread   |
+| **Customization**   | Limited customization options                                      | Highly customizable                                                     |
+| **Performance**     | Faster and more efficient due to native components                 | Can be slower due to the overhead of the Java implementation            |
+| **Portability**     | More platform-dependent                                            | More portable across different operating systems                        |

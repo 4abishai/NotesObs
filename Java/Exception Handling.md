@@ -209,6 +209,19 @@ Caught exception(s): java.lang.Exception: Something went wrong!
 
 A method that declares itself `throws` *may* throw an exception.
 
+**Note**: If `throws` is not present then we must use `try`-`catch` block to avoid following error:
+```java
+public static void anotherRiskyMethod() {
+        throw new Exception("Something went wrong in anotherRiskyMethod!");
+}
+```
+
+```CSS
+ReThrows.java:20: error: unreported exception Exception; must be caught or declared to be thrown
+        throw new Exception("Something went wrong in anotherRiskyMethod!");
+        ^
+1 error
+```
 ### finally block
 ![[Pasted image 20240330232300.png]]
 ![[Pasted image 20240330232320.png]]
@@ -259,6 +272,18 @@ Number is valid: 10
 Caught an exception: Number is too large: 200
 ```
 
+#### getMessage()
+In Java, the `getMessage()` method is a method of the `Throwable` class, which is the superclass of all exceptions and errors. It is used to retrieve the error message associated with an exception.
+
+```java
+System.out.println("Caught an exception: " + e.getMessage());
+System.out.println("Caught an exception: " + e);
+```
+
+```CSS
+Caught an exception: Number is too large: 200
+Caught an exception: MyCustomException: Number is too large: 200
+```
 #### Methods defined by Throwable class
 
 All user exceptions have the methods defined by the Throwable class:

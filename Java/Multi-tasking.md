@@ -24,6 +24,11 @@ If multiple Threads are waiting to execute then which Thread will execute first 
 
 ![[Pasted image 20240322024118.png]]
 
+**Note**:
+
+You need to make the `run()` method in the `MyThread` class `public` is because the `run()` method in the `Runnable` interface is a `public` method.
+
+When you implement an interface in Java, the methods you define in your class must have the same access modifier or a stronger access modifier than the corresponding methods in the interface. This is known as the [[Liskov Substitution Principle]] in object-oriented programming, which states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. 
 #### Diff. between t.start() and t.run() methods
 
 ![[Pasted image 20240322024304.png]]
@@ -83,7 +88,7 @@ t.start();
 ```java
 Thread t = new Thread();
 Thread t1 = new Thread(r); // r is target runnable
-t.start();
+t1.start();
 ```
 
 ![[Pasted image 20240323124945.png]]
@@ -124,6 +129,7 @@ t1.run(); // Called after performing main thread's action
 
 ![[Pasted image 20240323125516.png]]
 
+No new thread is created here.
 #### r.start( )
 
 ```java
@@ -144,6 +150,7 @@ r.run()
 
 ![[Pasted image 20240323130043.png]]
 
+No new thread is created.
 ## Thread class Constructors
 
  1. Thread t=new Thread();
@@ -283,8 +290,8 @@ The **yield()** basically means that the thread is not doing anything particular
 - If any thread executes the yield method, the thread scheduler checks if there is any thread with the same or high priority as this thread. If the processor finds any thread with higher or same priority then it will move the current thread to Ready/Runnable state and give the processor to another thread and if not – the current thread will keep executing.
 - Once a thread has executed the yield method and there are many threads with the same priority is waiting for the processor, then we can’t specify which thread will get the execution chance first.
 - The thread which executes the yield method will enter in the Runnable state from Running state.
-- Once a thread pauses its execution, we can’t specify when it will get a chance again it depends on the thread scheduler.
-- The underlying platform must provide support for preemptive scheduling if we are using the yield method.
+- Once a thread pauses its execution, *we can’t specify when it will get a chance again it depends on the thread scheduler*.
+- The underlying *platform must provide support for preemptive scheduling* if we are using the yield method.
 
 ![[Pasted image 20240323153044.png]]
 
@@ -302,35 +309,31 @@ sleep for the specified number of milliseconds plus nano seconds
 ![[Pasted image 20240323162847.png]]
 
 ```java
-public class sleep implements Runnable {
-    // Thread t;
-
-    public void run() {
-        for (int i = 0; i < 4; i++) {
-            System.out.println(
-                    Thread.currentThread().getName() + " " + i);
+public class sleep {
+    public static void main(String[] args) {
+        System.out.println(Thread.currentThread().getName());
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Iteration " + i);
+            
             try {
-                // thread to sleep for 1000 milliseconds
+                // Pause the thread for 1 second (1000 milliseconds)
                 Thread.sleep(1000);
-            }
-
-            catch (Exception e) {
-                System.out.println(e);
+            } 
+            
+            catch (InterruptedException e) {
             }
         }
     }
-
-    public static void main(String[] args) throws Exception {
-        Thread t = new Thread(new sleep());
-
-        // call run() function
-        t.start();
-
-        Thread t2 = new Thread(new sleep());
-
-        // call run() function
-        t2.start();
-    }
 }
+```
+
+```css
+main
+Iteration 0
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
 ```
 

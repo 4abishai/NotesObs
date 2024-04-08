@@ -4,17 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "e9df85f258e87210",
+        "id": "b46de10b1e2b2a23",
         "type": "tabs",
         "children": [
           {
-            "id": "90926748a2fb9d3c",
+            "id": "6cd51ae2e34612af",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Abstraction.md",
+                "file": "Java/String.md",
                 "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6c169cf05763df95",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java/Abstraction.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -69,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "0667195683b4df81",
@@ -86,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Abstraction.md",
+                "file": "Java/String.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Abstraction.md",
+                "file": "Java/String.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Abstraction.md"
+                "file": "Java/String.md"
               }
             }
           }
@@ -147,30 +158,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "90926748a2fb9d3c",
+  "active": "6cd51ae2e34612af",
   "lastOpenFiles": [
-    "Pasted image 20240408020031.png",
-    "Java/GUI.md",
-    "Java/img/Pasted image 20240408011730.png",
-    "Abstraction.md",
-    "Java/img/Pasted image 20240408014531.png",
-    "Java/Access control mechanism.md",
-    "Java/img/Pasted image 20240408015302.png",
-    "Java/img/Pasted image 20240408015246.png",
-    "Java/img/Pasted image 20240408014850.png",
-    "Java/img/Pasted image 20240408014548.png",
-    "Java/Event.md",
+    "Java/Abstraction.md",
+    "Java/String.md",
     "Java/Inheritance.md",
-    "Java/Runtime polymorphism (Dynamic method dispatch).md",
     "Java/Final.md",
-    "Java/img/Pasted image 20240408011852.png",
-    "Java/img/Pasted image 20240408011819.png",
-    "Java/img/Pasted image 20240408005529.png",
-    "Java/img/Pasted image 20240408010937.png",
+    "Java/Access control mechanism.md",
+    "Java/Synchornization.md",
+    "Java/Nested Interface.md",
+    "Lambda Expression (Java 8).md",
+    "Java/GUI.md",
+    "Java/Event.md",
+    "Model-View-Controller Arch.md",
+    "Pasted image 20240409020145.png",
+    "Java/Exception Handling.md",
+    "Java/Liskov Substitution Principle.md",
+    "Java/img/Pasted image 20240409003344.png",
+    "Java/Multi-tasking.md",
+    "Java/Runtime polymorphism (Dynamic method dispatch).md",
+    "Java/Dynamic Method Lookup.md",
+    "Liskov.md",
+    "Java/img/Pasted image 20240408131408.png",
+    "Java/img/Pasted image 20240408132725.png",
+    "Java/img/Pasted image 20240408132601.png",
+    "Java/img/Pasted image 20240408132229.png",
+    "Java/img/Pasted image 20240408131934.png",
+    "Java/img/Pasted image 20240408131518.png",
+    "Java/img/Pasted image 20240408020031.png",
+    "Java/img/Pasted image 20240408130033.png",
     "OS/Paging.md",
     "OS/Page Replacement.md",
-    "Java/Exception Handling.md",
-    "Java/Multi-tasking.md",
     "SQL/SLIDE-3.md",
     "OS/Disk Scheduling.md",
     "OS/Disk Structure.md",
@@ -178,15 +196,8 @@
     "SQL/SLIDE-5.md",
     "SQL/SLIDE-4.md",
     "SQL/SLIDE-2.md",
-    "SQL/SLIDE-7.md",
     "SQL",
-    "OS/Thrashing.md",
-    "OS/Demand Paging.md",
-    "OS/Virtual Memory.md",
     "OS/img",
-    "Java/Synchornization.md",
-    "Deadlock.md",
-    "Java/img/Synchornization.md",
     "Java/img",
     "Java"
   ]

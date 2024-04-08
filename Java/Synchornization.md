@@ -20,7 +20,7 @@
 - *Each instance of a class has its own lock*, so if one thread acquires the lock of an instance, other threads must wait for it to release the lock before they can access synchronized blocks or methods of that instance.
 
 ```java
-public synchronized void synchronizedMethod() {
+public synchronized void synchronizedMethod() { 
 	// This method is synchronized on the instance level
 }
 
@@ -42,7 +42,7 @@ synchronized(this) {
 ```java
 class Display {
     public void wish(String name) {
-        synchronized (this) {
+        synchronized (this) { // imp
             for (int i = 0; i < 5; i++) {
                 System.out.print("good morning:");
                 try {
@@ -97,7 +97,7 @@ good morning:Behera
 ![[Pasted image 20240329221410.png]]
 
 #### 2. Class Lock (synchronized static block/method): 
-- When you use the `synchronized` keyword with a static block or method, you are acquiring a lock on the class object (`Class` instance) associated with the class. 
+- When you use the `synchronized` keyword with a **static** block or method, you are acquiring a lock on the class object (`Class` instance) associated with the class. 
 - This means that other synchronized static blocks or methods of the *same class* cannot be executed concurrently by other threads. 
 - There is only one class object per class, so if one thread acquires the lock of a class, other threads must wait for it to release the lock before they can access synchronized static blocks or methods of that class.
 
@@ -115,7 +115,7 @@ synchronized(MyClass.class) {
 
 ```java
 class Display {
-    public static synchronized void wish(String name) {
+    public static synchronized void wish(String name) { // imp
         for (int i = 0; i < 5; i++) {
             System.out.print("good morning:");
             try {
@@ -168,7 +168,7 @@ good morning:Behera
 ```java
 class Display {
     public static void wish(String name) {
-        synchronized (Display.class) {
+        synchronized (Display.class) { // imp
             for (int i = 0; i < 5; i++) {
                 System.out.print("good morning:");
                 try {
@@ -314,11 +314,11 @@ Thread 21 acquired lock2
 
 ### Deadlock
 
-- Deadlock occurs when two or more threads are waiting on one another interminably. This kind of circumstance is known as infinite waiting.
+- Deadlock occurs when *two or more threads are waiting on one another interminably*. This kind of circumstance is known as infinite waiting.
 
 - Deadlock cannot be resolved, however there are a number of preventative (or avoidance) strategies that can be used.
 
-- We must exercise extra caution anytime we utilize synchronized keywords because they are the source of deadlock.
+- We must exercise extra caution anytime we utilize *synchronized keywords* because they are the **source of deadlock**.
 
 ```java
 class A {
@@ -391,6 +391,7 @@ public class DeadlockExample {
         A a = new A();
         B b = new B();
 
+		// Using same instance(object a b) of A B on t1 t2 while object lock is present
         thread1 t1 = new thread1(a, b);
         thread2 t2 = new thread2(a, b);
 
@@ -407,6 +408,12 @@ Thread2 trying to call a.last()
 Thread1 trying to call b.last()
 ...
 ```
+
+1. `thread1` starts executing the `foo()` method of `A`, which acquires the lock on `A`.
+2. `thread2` starts executing the `bar()` method of `B`, which acquires the lock on `B`.
+3. `thread1` then tries to call the `last()` method of `B`, but it is blocked because `thread2` holds the lock on `B`.
+4. `thread2` then tries to call the `last()` method of `A`, but it is blocked because `thread1` holds the lock on `A`.
+5. Both threads are now waiting for each other to release the locks they hold, leading to a deadlock.
 
 ![[Pasted image 20240330025538.png]]
 
