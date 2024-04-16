@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "16ddd3be58be3ad9",
+        "id": "a0aca74f74203398",
         "type": "tabs",
         "children": [
           {
-            "id": "4c4c1c5096ce2dc6",
+            "id": "a16b5425e11ba6e6",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "OS/File Management/img/Pasted image 20240416191611.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "OS/File Management/img/Pasted image 20240416191611.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "OS/File Management/img/Pasted image 20240416191611.png"
+              }
             }
           }
         ]
@@ -138,9 +142,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4c4c1c5096ce2dc6",
+  "active": "879f025a0b2e9f84",
   "lastOpenFiles": [
+    "OS/File Management/Directory.md",
+    "OS/File Management/img/Pasted image 20240416203102.png",
+    "OS/File Management/img/Pasted image 20240416194955.png",
+    "OS/File Management/img/Pasted image 20240416192759.png",
+    "OS/File Management/img/Pasted image 20240416191611.png",
+    "Java/GUI.md",
     "OS/File Management/File Concept.md",
+    "OS/File Management/img/Pasted image 20240416170616.png",
+    "OS/File Management/Access Methods.md",
+    "OS/File Management/img/Pasted image 20240416174336.png",
     "OS/File Management/img",
     "COA/Input Output.md",
     "COA/img/Pasted image 20240415160256.png",
@@ -149,15 +162,8 @@
     "COA/img/Pasted image 20240415162711.png",
     "OS/File Management",
     "COA/img/Pasted image 20240416014831.png",
-    "COA/img/Pasted image 20240416014514.png",
-    "COA/img/Pasted image 20240416014028.png",
-    "COA/img/Pasted image 20240415233725.png",
-    "COA/img/Pasted image 20240415231604.png",
-    "COA/img/Pasted image 20240415221512.png",
-    "COA/img/Pasted image 20240415221458.png",
     "Untitled 1",
     "Java/Event.md",
-    "Java/GUI.md",
     "Java/Programs.md",
     "Java/String.md",
     "Java/Model-View-Controller Arch.md",
@@ -177,9 +183,6 @@
     "Liskov.md",
     "OS/Paging.md",
     "OS/Page Replacement.md",
-    "SQL/SLIDE-3.md",
-    "OS/Disk Scheduling.md",
-    "OS/Disk Structure.md",
     "SQL",
     "OS/img",
     "Java/img",
