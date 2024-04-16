@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a0aca74f74203398",
+        "id": "7ab68eae99dda205",
         "type": "tabs",
         "children": [
           {
-            "id": "a16b5425e11ba6e6",
+            "id": "c074aa4a6884b238",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "image",
+              "state": {
+                "file": "OS/File Management/img/Pasted image 20240416233516.png"
+              }
             }
           }
         ]
@@ -81,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/File Management/img/Pasted image 20240416191611.png",
+                "file": "OS/File Management/img/Pasted image 20240416233516.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/File Management/img/Pasted image 20240416191611.png",
+                "file": "OS/File Management/img/Pasted image 20240416233516.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/File Management/img/Pasted image 20240416191611.png"
+                "file": "OS/File Management/img/Pasted image 20240416233516.png"
               }
             }
           }
@@ -144,24 +146,32 @@
   },
   "active": "879f025a0b2e9f84",
   "lastOpenFiles": [
+    "OS/File Management/Allocation Methods.md",
+    "OS/File Management/Free-Space Management.md",
+    "OS/File Management/img/Pasted image 20240417020057.png",
+    "OS/File Management/img/Pasted image 20240417020035.png",
+    "OS/File Management/img/Pasted image 20240417015018.png",
+    "OS/File Management/img/Pasted image 20240417012457.png",
+    "OS/Virtual Memory.md",
+    "OS/Demand Paging.md",
+    "OS/File Management/File System Implementation.md",
+    "OS/File Management/img/Pasted image 20240417001708.png",
+    "Partitions and Mounting.md",
+    "OS/File Management/File System Mounting.md",
     "OS/File Management/Directory.md",
+    "OS/File Management/File Concept.md",
+    "OS/File Management/Access Methods.md",
+    "OS/File Management/File System Structure.md",
+    "OS/File Management/img/Pasted image 20240416233516.png",
+    "OS/File Management/img/Pasted image 20240416233647.png",
+    "OS/File Management/img/Pasted image 20240416225308.png",
     "OS/File Management/img/Pasted image 20240416203102.png",
     "OS/File Management/img/Pasted image 20240416194955.png",
-    "OS/File Management/img/Pasted image 20240416192759.png",
-    "OS/File Management/img/Pasted image 20240416191611.png",
     "Java/GUI.md",
-    "OS/File Management/File Concept.md",
-    "OS/File Management/img/Pasted image 20240416170616.png",
-    "OS/File Management/Access Methods.md",
-    "OS/File Management/img/Pasted image 20240416174336.png",
     "OS/File Management/img",
     "COA/Input Output.md",
-    "COA/img/Pasted image 20240415160256.png",
     "COA/img",
-    "COA/img/Pasted image 20240415161145.png",
-    "COA/img/Pasted image 20240415162711.png",
     "OS/File Management",
-    "COA/img/Pasted image 20240416014831.png",
     "Untitled 1",
     "Java/Event.md",
     "Java/Programs.md",
@@ -176,13 +186,6 @@
     "Java/Runtime polymorphism (Dynamic method dispatch).md",
     "Java/Final.md",
     "Java/Dynamic Method Lookup.md",
-    "Java/Abstraction.md",
-    "Java/Liskov Substitution Principle.md",
-    "Java/Inheritance.md",
-    "Java/Access control mechanism.md",
-    "Liskov.md",
-    "OS/Paging.md",
-    "OS/Page Replacement.md",
     "SQL",
     "OS/img",
     "Java/img",
