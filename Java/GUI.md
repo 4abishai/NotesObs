@@ -261,7 +261,7 @@ frame.setContentPane(contentPane);
 
 1. **Component component**: This parameter specifies the component to be added to the container. It can be any subclass of the `Component` class, such as `JButton`, `JLabel`, `JTextField`, etc.
 2. **Object constraints (optional)**: This parameter is used to specify layout constraints when adding the component to a container that uses a layout manager. Layout managers are used to arrange components within a container. Different layout managers may require different types of constraints to determine the component's position and size within the container. If the container does not use a layout manager (e.g., it uses absolute positioning), this parameter is typically `null`.
-### Working with componets and containers
+### Working with components and containers
 
 The Swing way of working with components and containers can be summarized as follows:
 

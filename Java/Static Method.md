@@ -1,0 +1,6 @@
+The reason why static methods cannot be overridden in object-oriented programming is due to the fundamental differences between static and instance methods.
+
+1. **Binding**: Static methods are bound to the class, not to the instance of the class. This means that the implementation of a static method is determined at compile-time based on the reference type, not the runtime type of the object.
+2. **Inheritance**: When a subclass inherits from a superclass, the static methods in the subclass are not considered to be overriding the static methods in the superclass. Instead, they are considered to be "hiding" the superclass's static methods.
+3. **Method Resolution**: When a method is called on an object, the method resolution mechanism first looks for the method in the object's class, then in the parent class, and so on. For static methods, this resolution happens at compile-time, not at runtime. As a result, the static method implementation that is called is determined by the reference type of the object, not its actual runtime type.
+4. **Polymorphism**: Polymorphism, which is the ability of an object to take on multiple forms, does not apply to static methods. Polymorphism is a fundamental concept in object-oriented programming, but it is primarily associated with instance (non-static) methods.

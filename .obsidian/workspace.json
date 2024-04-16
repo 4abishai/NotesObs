@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b46de10b1e2b2a23",
+        "id": "16ddd3be58be3ad9",
         "type": "tabs",
         "children": [
           {
-            "id": "6cd51ae2e34612af",
+            "id": "4c4c1c5096ce2dc6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java/String.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6c169cf05763df95",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java/Abstraction.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -97,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/String.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/String.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Java/String.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -158,44 +138,48 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "879f025a0b2e9f84",
+  "active": "4c4c1c5096ce2dc6",
   "lastOpenFiles": [
-    "Java/Abstraction.md",
-    "Java/String.md",
-    "Java/Inheritance.md",
-    "Java/Final.md",
-    "Java/Access control mechanism.md",
-    "Java/Synchornization.md",
-    "Java/Nested Interface.md",
-    "Java/Lambda Expression (Java 8).md",
-    "Java/GUI.md",
+    "OS/File Management/File Concept.md",
+    "OS/File Management/img",
+    "COA/Input Output.md",
+    "COA/img/Pasted image 20240415160256.png",
+    "COA/img",
+    "COA/img/Pasted image 20240415161145.png",
+    "COA/img/Pasted image 20240415162711.png",
+    "OS/File Management",
+    "COA/img/Pasted image 20240416014831.png",
+    "COA/img/Pasted image 20240416014514.png",
+    "COA/img/Pasted image 20240416014028.png",
+    "COA/img/Pasted image 20240415233725.png",
+    "COA/img/Pasted image 20240415231604.png",
+    "COA/img/Pasted image 20240415221512.png",
+    "COA/img/Pasted image 20240415221458.png",
+    "Untitled 1",
     "Java/Event.md",
+    "Java/GUI.md",
+    "Java/Programs.md",
+    "Java/String.md",
     "Java/Model-View-Controller Arch.md",
-    "Java/img/Pasted image 20240409020145.png",
-    "Java/Exception Handling.md",
-    "Java/Liskov Substitution Principle.md",
-    "Java/img/Pasted image 20240409003344.png",
+    "Java/Nested Interface.md",
+    "Java/Static Method.md",
+    "Java/Lambda Expression (Java 8).md",
+    "Java/Synchornization.md",
     "Java/Multi-tasking.md",
+    "Java/Exception Handling.md",
     "Java/Runtime polymorphism (Dynamic method dispatch).md",
+    "Java/Final.md",
     "Java/Dynamic Method Lookup.md",
+    "Java/Abstraction.md",
+    "Java/Liskov Substitution Principle.md",
+    "Java/Inheritance.md",
+    "Java/Access control mechanism.md",
     "Liskov.md",
-    "Java/img/Pasted image 20240408131408.png",
-    "Java/img/Pasted image 20240408132725.png",
-    "Java/img/Pasted image 20240408132601.png",
-    "Java/img/Pasted image 20240408132229.png",
-    "Java/img/Pasted image 20240408131934.png",
-    "Java/img/Pasted image 20240408131518.png",
-    "Java/img/Pasted image 20240408020031.png",
-    "Java/img/Pasted image 20240408130033.png",
     "OS/Paging.md",
     "OS/Page Replacement.md",
     "SQL/SLIDE-3.md",
     "OS/Disk Scheduling.md",
     "OS/Disk Structure.md",
-    "SQL/SLIDE-6.md",
-    "SQL/SLIDE-5.md",
-    "SQL/SLIDE-4.md",
-    "SQL/SLIDE-2.md",
     "SQL",
     "OS/img",
     "Java/img",

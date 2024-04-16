@@ -337,3 +337,65 @@ Iteration 3
 Iteration 4
 ```
 
+### 3. join( )
+In Java, the `join()` method is used to wait for a thread to die. It causes the currently executing thread to pause its execution until the target thread finishes its execution.
+
+```java
+public class JoinExample {
+    public static void main(String[] args) {
+
+        // Thread thread1 = new Thread(new Runnable() {
+        // public void run() {
+        // for (int i = 0; i < 5; i++) {
+        // System.out.println("Thread 1: " + i);
+        // try {
+        // Thread.sleep(1000); // Sleep for 1 second
+        // } catch (InterruptedException e) {
+        // e.printStackTrace();
+        // }
+        // }
+        // }
+        // });
+
+        // Instead of writing above; use lambda expression
+
+        Thread thread1 = new Thread(() -> {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("Thread 1: " + i);
+                try {
+                    Thread.sleep(1000); // Sleep for 1 second
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        Thread thread2 = new Thread(() -> {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("Thread 2: " + i);
+                try {
+                    Thread.sleep(1000); // Sleep for 1 second
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        thread1.start(); // Start thread 1
+        thread2.start(); // Start thread 2
+
+        try {
+            thread1.join(); // Wait for thread 1 to finish
+            thread2.join(); // Wait for thread 2 to finish
+        } catch (InterruptedException e) { // join() will throw InterruptedException
+            e.printStackTrace();
+        }
+
+        System.out.println("Both threads have finished.");
+        // Because you're using join(), the main thread waits
+        // for both thread1 and thread2 to finish before printing "Both threads have
+        // finished."
+    }
+}
+```
+

@@ -113,7 +113,16 @@ class Circle extends Shape {
 
 2. **Interfaces**:
    - An interface comprises a set of abstract methods that we would want our class to implement. 
-   - These methods are **`public`**, **`static`**, **`final`** and *abstract by default*(i.e., we don’t have to explicitly use the “abstract” keyword).
+   - These methods are **`public`**, **`static`**, and *abstract by default*(i.e., we don’t have to explicitly use the “abstract” keyword).
+   - In Java, interface variables are implicitly **`public`**, **`static`**, and **`final`**. This means that interface variables are constants, and they cannot be changed once they are assigned a value. Here's an example:
+
+   ```java
+	public interface MyInterface {
+	    int MY_CONSTANT = 100; 
+	    // This variable is public, static, and final by default
+	}
+   ```
+
    - Any class implementing the interface will need to provide implementations of all of those methods.
    - A class can implement multiple interfaces.
    - Interfaces are useful for achieving abstraction and providing a common API for related classes.
@@ -145,6 +154,8 @@ class SportsCar implements Drivable {
     }
 }
 ```
+
+**Note**: `public` must be used when overriding interface method(s) due to [[Liskov Substitution Principle]].
 
 ### Why use Interface
 

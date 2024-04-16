@@ -209,8 +209,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ButtonPress2 extends JFrame implements
-        ActionListener {
+public class ButtonPress2 extends JFrame {
     public ButtonPress2(String name) {
         super(name);
         JButton button = new JButton("Click Me");
@@ -222,6 +221,7 @@ public class ButtonPress2 extends JFrame implements
             }
         }); 
 
+        // this.add(button);
         add(button);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(300, 300);
@@ -296,7 +296,7 @@ public class TextBoxMultiBtn extends JFrame {
 
     TextBoxMultiBtn(String title) {
         super(title);
-        setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
+        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
         
         add(new JLabel("Value:"));
         valueField = new JTextField("10", 8);
@@ -336,13 +336,129 @@ public class TextBoxMultiBtn extends JFrame {
 
 - The constructor `TextBoxMultiBtn(String title)` sets up an `ActionListener` for the "Compute" button, which listens for click events. When the button is clicked, it retrieves the value from `valueField`, calculates the square and square root, and updates the `squareField` and `rootField` text fields with the results.
 
+### JList
+```java
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JList;
+import javax.swing.JButton;
+import javax.swing.SwingUtilities;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Color;
+
+public class E extends JFrame {
+
+    public E(String title) {
+        super(title);
+        setSize(300, 200);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        String[] colorNames = { "White", "Orange", "Red", "Blue" };
+        Color[] colors = { Color.WHITE, Color.ORANGE, Color.RED, Color.BLUE };
+
+        JPanel panel = new JPanel();
+        JList<String> colorList = new JList<>(colorNames);
+        JButton changeColorButton = new JButton("Click");
+
+        changeColorButton.addActionListener((ActionEvent e) -> {
+            int selectedIndex = colorList.getSelectedIndex();
+            if (selectedIndex >= 0 && selectedIndex < colors.length) {
+                panel.setBackground(colors[selectedIndex]);
+            }
+        });
+
+        panel.add(colorList);
+        panel.add(changeColorButton);
+        add(panel);
+
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new E("My frame"));
+    }
+}
+```
+
+![[Pasted image 20240409154352.png]]
+
+### JComboBox
+
+```java
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class F extends JFrame {
+
+    public F(String title) {
+        super(title);
+        setSize(600, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JComboBox<Integer> redComboBox = new JComboBox<>();
+        JComboBox<Integer> greenComboBox = new JComboBox<>();
+        JComboBox<Integer> blueComboBox = new JComboBox<>();
+
+        for (int i = 0; i <= 255; i++) {
+            redComboBox.addItem(i);
+            greenComboBox.addItem(i);
+            blueComboBox.addItem(i);
+        }
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+
+        JButton btn = new JButton("Show Output");
+        btn.addActionListener((ActionEvent e) -> {
+            int red = (int) redComboBox.getSelectedItem();
+            int green = (int) greenComboBox.getSelectedItem();
+            int blue = (int) blueComboBox.getSelectedItem();
+
+            Color color = new Color(red, green, blue);
+            panel.setBackground(color);
+        });
+
+        // Create JLabel objects
+        JLabel redL = new JLabel("Red:");
+        redL.setForeground(Color.RED);
+        JLabel greenL = new JLabel("Green:");
+        greenL.setForeground(Color.GREEN);
+        JLabel blueL = new JLabel("Blue:");
+        blueL.setForeground(Color.BLUE);
+
+        panel.add(redL);
+        panel.add(redComboBox);
+        panel.add(greenL);
+        panel.add(greenComboBox);
+        panel.add(blueL);
+        panel.add(blueComboBox);
+        panel.add(btn);
+        add(panel);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            F app = new F("My Frame");
+            app.setVisible(true);
+        });
+    }
+}
+```
+
+![[Pasted image 20240409154512.png]]
 ### Event Dispatch Thread()
 The Event Dispatch Thread (EDT) is a special thread in Swing applications that is responsible for handling events. Swing components need to run on the EDT because Swing is not thread-safe, meaning that Swing components should only be accessed, modified, or queried from the EDT *to avoid potential concurrency issues.*
 
 By ensuring that all interactions with Swing components occur on the EDT, Swing applications can avoid problems such as *race conditions, deadlocks, and inconsistent GUI behavior*. The *EDT processes events sequentially*, which helps maintain the order of events and ensures that updates to the GUI are synchronized and predictable
 #### SwingUtilities.invokeLater() 
 
-The `SwingUtilities.invokeLater()` method is used in Java Swing programming to ensure that any code that interacts with or modifies Swing GUI components is executed on the Event Dispatch Thread (EDT). This is important because Swing components are not thread-safe, and modifying them from outside the EDT can lead to race conditions, deadlocks, and other threading issues.
+The `SwingUtilities.invokeLater()` method is used in Java Swing programming to ensure that any code that interacts with or modifies Swing GUI components is executed on the Event Dispatch Thread (EDT). This is important because Swing components are not thread-safe, and modifying them from outside the EDT can lead to race conditions, deadlocks, and other threading issues. 
+Must be imported: `import javax.swing.SwingUtilities;`
 
 ```java
 SwingUtilities.invokeLater(new Runnable() {
