@@ -82,10 +82,6 @@ In summary, ASIDs in TLBs facilitate address-space protection and efficient proc
 
 For example, with a 14-bit address space and a 2 KB page size, the valid-invalid bit is used to check the validity of addresses. Any attempt to access addresses beyond the valid range specified for the process will result in a trap to the operating system, indicating an invalid page reference.
 
-### Disadvantage
-
-The example also illustrates a problem with internal fragmentation in paging. Because of the fixed page size, there may be unused address space within a page, leading to inefficiencies in memory utilization.
-
 ### Page Table Size Optimization
 
 To mitigate the overhead of maintaining large page tables for processes that only utilize a small fraction of their address space, some systems provide hardware support, such as a **page-table length register (PTLR)**. This register *indicates the size of the page table and is used to verify the validity of logical addresses*. If an address falls outside the valid range specified by the PTLR, an error trap is generated.

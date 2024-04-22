@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "7ab68eae99dda205",
+        "id": "202d84b921216b2d",
         "type": "tabs",
         "children": [
           {
-            "id": "c074aa4a6884b238",
+            "id": "fa5efa8288faac29",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "OS/File Management/img/Pasted image 20240416233516.png"
+                "file": "Module-4.md",
+                "mode": "preview",
+                "source": false
               }
             }
           }
@@ -67,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 266.5,
+    "collapsed": true
   },
   "right": {
     "id": "0667195683b4df81",
@@ -83,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/File Management/img/Pasted image 20240416233516.png",
+                "file": "Module-4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/File Management/img/Pasted image 20240416233516.png",
+                "file": "Module-4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/File Management/img/Pasted image 20240416233516.png"
+                "file": "Module-4.md"
               }
             }
           }
@@ -144,48 +147,48 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "879f025a0b2e9f84",
+  "active": "fa5efa8288faac29",
   "lastOpenFiles": [
-    "OS/File Management/Allocation Methods.md",
+    "Module-5.md",
+    "Module-3.md",
+    "Module-4.md",
+    "Pasted image 20240422191026.png",
+    "Pasted image 20240422172039.png",
+    "Pasted image 20240422171943.png",
+    "COA/Input Output.md",
+    "COA/Condition Code.md",
+    "COA/img/Pasted image 20240420203004.png",
+    "COA/Instruction Set.md",
+    "COA/img/Pasted image 20240421221402.png",
+    "COA/img/Pasted image 20240421221320.png",
+    "COA/img/Pasted image 20240421205409.png",
+    "COA/img/Pasted image 20240421204910.png",
+    "COA/img/Pasted image 20240421204850.png",
+    "COA/img/Pasted image 20240421204744.png",
+    "COA/Microprogrammed.md",
+    "COA/Hardwired Control Unit.md",
+    "SQL/SLIDE-5.md",
+    "SQL/SLIDE-3.md",
+    "SQL/SLIDE-4.md",
+    "SQL/SLIDE-7.md",
     "OS/File Management/Free-Space Management.md",
-    "OS/File Management/img/Pasted image 20240417020057.png",
-    "OS/File Management/img/Pasted image 20240417020035.png",
-    "OS/File Management/img/Pasted image 20240417015018.png",
-    "OS/File Management/img/Pasted image 20240417012457.png",
-    "OS/Virtual Memory.md",
-    "OS/Demand Paging.md",
+    "OS/File Management/Access Methods.md",
+    "OS/File Management/Allocation Methods.md",
     "OS/File Management/File System Implementation.md",
-    "OS/File Management/img/Pasted image 20240417001708.png",
-    "Partitions and Mounting.md",
+    "OS/File Management/File System Structure.md",
     "OS/File Management/File System Mounting.md",
     "OS/File Management/Directory.md",
+    "OS/Page Replacement.md",
     "OS/File Management/File Concept.md",
-    "OS/File Management/Access Methods.md",
-    "OS/File Management/File System Structure.md",
-    "OS/File Management/img/Pasted image 20240416233516.png",
-    "OS/File Management/img/Pasted image 20240416233647.png",
-    "OS/File Management/img/Pasted image 20240416225308.png",
-    "OS/File Management/img/Pasted image 20240416203102.png",
-    "OS/File Management/img/Pasted image 20240416194955.png",
-    "Java/GUI.md",
+    "OS/Disk Scheduling.md",
+    "OS/Disk Structure.md",
+    "OS/Thrashing.md",
+    "OS/Demand Paging.md",
+    "OS/Virtual Memory.md",
     "OS/File Management/img",
-    "COA/Input Output.md",
     "COA/img",
     "OS/File Management",
     "Untitled 1",
-    "Java/Event.md",
-    "Java/Programs.md",
-    "Java/String.md",
-    "Java/Model-View-Controller Arch.md",
-    "Java/Nested Interface.md",
-    "Java/Static Method.md",
-    "Java/Lambda Expression (Java 8).md",
-    "Java/Synchornization.md",
-    "Java/Multi-tasking.md",
-    "Java/Exception Handling.md",
-    "Java/Runtime polymorphism (Dynamic method dispatch).md",
-    "Java/Final.md",
-    "Java/Dynamic Method Lookup.md",
     "SQL",
     "OS/img",
     "Java/img",
