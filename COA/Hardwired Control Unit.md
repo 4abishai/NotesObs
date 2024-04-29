@@ -48,7 +48,7 @@ Step decoder 3 : 8
 as T1, T2,...T5 (8 - 5 = 3 lines will be ignored)
 
 Instruction decoder 2 : 4
-as S1, S2, S3, S4
+as I1, I2, I3, I4
 
 ![[Pasted image 20240420235817.png]]
 

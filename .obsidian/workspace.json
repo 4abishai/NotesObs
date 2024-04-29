@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "202d84b921216b2d",
+        "id": "16001752fefd557c",
         "type": "tabs",
         "children": [
           {
-            "id": "fa5efa8288faac29",
+            "id": "2b3f3db253e643bf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Module-4.md",
+                "file": "COA/Condition Code.md",
                 "mode": "preview",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5,
-    "collapsed": true
+    "width": 266.5
   },
   "right": {
     "id": "0667195683b4df81",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Module-4.md",
+                "file": "COA/Condition Code.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Module-4.md",
+                "file": "COA/Condition Code.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Module-4.md"
+                "file": "COA/Condition Code.md"
               }
             }
           }
@@ -147,44 +146,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fa5efa8288faac29",
+  "active": "2b3f3db253e643bf",
   "lastOpenFiles": [
-    "Module-5.md",
-    "Module-3.md",
-    "Module-4.md",
-    "Pasted image 20240422191026.png",
-    "Pasted image 20240422172039.png",
-    "Pasted image 20240422171943.png",
+    "COA/Instruction Set.md",
+    "COA/Microprogrammed.md",
+    "COA/Hardwired Control Unit.md",
     "COA/Input Output.md",
     "COA/Condition Code.md",
+    "OS/Demand Paging.md",
+    "Pasted image 20240424183607.png",
+    "Pasted image 20240424180234.png",
+    "Java/Final.md",
+    "Java/Static Method.md",
+    "Java/Runtime polymorphism (Dynamic method dispatch).md",
+    "Java/Dynamic Method Lookup.md",
+    "Java/Access control mechanism.md",
+    "Java/Inheritance.md",
+    "Java/Nested Interface.md",
+    "Java/Abstraction.md",
+    "Java/Synchornization.md",
+    "Java/Multi-tasking.md",
+    "Java/Exception Handling.md",
+    "Java/Model-View-Controller Arch.md",
+    "Java/Event.md",
+    "Java/GUI.md",
+    "Java/String.md",
+    "Java/Lambda Expression (Java 8).md",
+    "Java/Liskov Substitution Principle.md",
+    "Java/Programs.md",
+    "Pasted image 20240423161141.png",
+    "Pasted image 20240422191026.png",
+    "Pasted image 20240422171943.png",
+    "Pasted image 20240422172039.png",
+    "Module-3.md",
+    "Module-5.md",
     "COA/img/Pasted image 20240420203004.png",
-    "COA/Instruction Set.md",
     "COA/img/Pasted image 20240421221402.png",
     "COA/img/Pasted image 20240421221320.png",
     "COA/img/Pasted image 20240421205409.png",
-    "COA/img/Pasted image 20240421204910.png",
-    "COA/img/Pasted image 20240421204850.png",
-    "COA/img/Pasted image 20240421204744.png",
-    "COA/Microprogrammed.md",
-    "COA/Hardwired Control Unit.md",
-    "SQL/SLIDE-5.md",
-    "SQL/SLIDE-3.md",
-    "SQL/SLIDE-4.md",
-    "SQL/SLIDE-7.md",
-    "OS/File Management/Free-Space Management.md",
-    "OS/File Management/Access Methods.md",
-    "OS/File Management/Allocation Methods.md",
-    "OS/File Management/File System Implementation.md",
-    "OS/File Management/File System Structure.md",
-    "OS/File Management/File System Mounting.md",
-    "OS/File Management/Directory.md",
-    "OS/Page Replacement.md",
-    "OS/File Management/File Concept.md",
-    "OS/Disk Scheduling.md",
-    "OS/Disk Structure.md",
-    "OS/Thrashing.md",
-    "OS/Demand Paging.md",
-    "OS/Virtual Memory.md",
     "OS/File Management/img",
     "COA/img",
     "OS/File Management",

@@ -16,6 +16,7 @@ Access to members of a class can be controlled using the **access**
 
 **Note**: A class cannot be private or protected.
 
+![[Pasted image 20240423161141.png]]
 #### Private Constructor
 If we make any class constructor private, then we cannot create the
 instance of that class from outside the class. For example:

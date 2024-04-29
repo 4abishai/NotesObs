@@ -171,6 +171,8 @@ class ShowJScrollPane {
 
 ### Layout Management & Managers
 
+`import java.awt.LayoutName;`
+
 Layout managers in Java are used to determine the size and position of components within a container (such as a JPanel or JFrame). They help ensure that the components are arranged and resized properly when the window is resized or components are added or removed.
 
 1. **FlowLayout**: This is the default layout manager for JPanel. It arranges components in a left-to-right, top-to-bottom flow, much like words in a paragraph. When there is no more horizontal space, it wraps to the next line.
@@ -261,6 +263,11 @@ frame.setContentPane(contentPane);
 
 1. **Component component**: This parameter specifies the component to be added to the container. It can be any subclass of the `Component` class, such as `JButton`, `JLabel`, `JTextField`, etc.
 2. **Object constraints (optional)**: This parameter is used to specify layout constraints when adding the component to a container that uses a layout manager. Layout managers are used to arrange components within a container. Different layout managers may require different types of constraints to determine the component's position and size within the container. If the container does not use a layout manager (e.g., it uses absolute positioning), this parameter is typically `null`.
+   ```java
+// Add components to the frame
+JButton button1 = new JButton("North");
+frame.add(button1, BorderLayout.NORTH);
+   ```
 ### Working with components and containers
 
 The Swing way of working with components and containers can be summarized as follows:
@@ -316,6 +323,9 @@ public class SwingProgram {
 ```
 
 - The `helloWorld` method is called via the `SwingUtilities.invokeLater` method. It is used to schedule a task for execution on the Event Dispatch Thread (EDT), which is the thread responsible for handling all Swing GUI events and updates. The Event Dispatch Thread is a single-threaded environment that ensures thread safety and prevents race conditions when modifying Swing components. All modifications to Swing components must be performed on the EDT to ensure proper behavior and avoid potential threading issues.
+   ```java
+import javax.swing.SwingUtilities;
+   ```
 - `label.setHorizontalAlignment(SwingConstants.CENTER);`: Sets the horizontal alignment of the label's text to center.
 - `frame.getContentPane().add(label, BorderLayout.CENTER);`: Adds the label to the center of the JFrame's content pane.
 - `closeButton.addActionListener(x -> frame.dispose());`: Adds an action listener to the close button that disposes of the frame when clicked.
@@ -360,7 +370,7 @@ public class ExtendsJFrame extends JFrame {
 
         label.setHorizontalAlignment(SwingConstants.CENTER);
 
-        add(label);
+        getContentPane().add(label);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(300, 300);
         setVisible(true);

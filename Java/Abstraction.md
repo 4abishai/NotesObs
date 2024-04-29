@@ -216,7 +216,7 @@ public static void testVehicle(Vehicle vehicle) {
 }
 ```
 
-This demonstrates the power of polymorphism enabled by interfaces. *The `testVehicle()` method can work with any object that implements the `Vehicle` interface, without needing to know the specific type of vehicle.
+This demonstrates the power of polymorphism enabled by interfaces. *The `testVehicle()` method can work with any object that implements the `Vehicle` interface, without needing to know the specific type of vehicle.*
 
 #### Multiple Inheritance
 Java does not support multiple inheritance of classes, but interfaces provide a way to achieve something similar. A class can implement multiple interfaces, giving it the benefits of the functionality defined in those interfaces, without the complications of the diamond problem that can arise with multiple inheritance of classes.
@@ -264,8 +264,5 @@ Interfaces promote abstraction by defining a contract without exposing the under
 
 **Note**: 
 ![[Pasted image 20240408125922.png]]
-
-### Interface Vs. Abstract Class
-![[Pasted image 20240408130033.png]]
 
 **SEE** [[Nested Interface]]

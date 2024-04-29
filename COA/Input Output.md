@@ -29,22 +29,17 @@ Control signal will decide which will respond.
 **Memory Read**: Memory responds
 **I/O Read**: I/O device responds
 
-**Isolated I/O** or **Mapped I/O**: I/O devices and memory have *separate address space*. Control signal distinguishes between the address spaces.
+**Isolated I/O** or **I/O Mapped I/O**: I/O devices and memory have *separate address space*. Control signal distinguishes between the address spaces.
 
-### Common Address, Data Bus and Control Bus
-![[Pasted image 20240415162651.png]]
-
-### Common Address, Data Bus and Control Bus
-![[Pasted image 20240415162711.png]]
 **Memory Mapped I/O**:  From the available memory address space some addresses are reserved for I/O devices. Addresses are from same address space.
 
 ![[Pasted image 20240415162210.png]]
 
-### Programmed I/O
+### Programmed control I/O
+Processor wastes CPU cycle checking the readiness of the device.
 ![[Pasted image 20240415202731.png]]
 
 **Note**: 
-- ![[Pasted image 20240415202844.png]]
 - ![[Pasted image 20240415203308.png]]
 
 #### Program
@@ -61,7 +56,7 @@ Processor doesn't wait its CPU cycles waiting for I/O devices rather the I/O dev
 #### Sequence of events involved in interrupt handling
 1. The device raises an *interrupt request*(INTR).
 2. The processor COMPLETES the execution of the current instruction and the program currently being executed is interrupted and saves the *contents of the PC* and *status/flag register*.
-(( 3. Interrupts are disabled by clearing the *IF bit* in the status/flag register to *0*. ))
+3. Interrupts are disabled by clearing the *IF bit* in the status/flag register to *0*.
 4. The action requested by the interrupt is performed by the interrupt-service routine, during which time the *device is informed that its request has been recognized, and in response, it deactivates the interrupt-request signal*.
 5. Upon completion of the interrupt-service routine, the *saved contents of the PC and Status registers are restored* (enabling interrupts by setting the *IF bit to 1*), and execution of the interrupted program is resumed.
 
@@ -76,7 +71,7 @@ Processor doesn't wait its CPU cycles waiting for I/O devices rather the I/O dev
 **Interrupt Request (INTR)**:
 ﻿The I/O devices can alert the processor when it becomes ready. It can do so by sending a hardware signal called an interrupt request to the processor.
 
-**Interrupt Service Routine**:
+**Interrupt Service Routine (ISR)**:
 The routine executed in response to an interrupt is called interrupt service routine. Eg - PRINT routine
 
 **Interrupt Acknowledge (INTA)**:
@@ -128,7 +123,7 @@ Given that different devices are likely to require different interrupt-service-r
 - To reduce the time involved in the polling process, a *device requesting an interrupt may identify itself directly to the processor*. Then, the processor can immediately start executing the corresponding ISR.
 - A device requesting an interrupt can identify itself if it has its own interrupt-request signal, or if it can send a **vector code** (like *memory address of ISR*) to the processor
 - A commonly used scheme is to *allocate permanently an area in the memory to hold the addresses of interrupt-service routines*. These addresses are usually referred to as **interrupt vectors**, and they are said to constitute the **interrupt-vector table**.
-- ﻿When an interrupt request arrives, the information provided by the I/O device is used as a *pointer into the interrupt-vector table*, and the address in the corresponding interrupt vector is automatically loaded into the program counter.
+- ﻿When an interrupt request arrives, the information provided by the I/O device **(vectored code)** is used as a *pointer into the interrupt-vector table*, and the address in the corresponding interrupt vector is automatically loaded into the program counter.
 
 **Note**:
 IO devices send interrupt vector code over the data bus.
@@ -164,3 +159,41 @@ Only after receiving the INTA signal, the device places the interrupt vector cod
 - Combines the multiple priority and daisy chain.
 - Devices are organized into group and each have different priority level.
 ![[Pasted image 20240416014831.png]]
+
+### DMA (Direct Memory Access)
+
+- To transfer large blocks of data at high speed, DMA approach is used.
+- A special control unit provided to allow *transfer of a block of data directly between an external device and the main memory*, **without continuous intervention by the processor**. This approach is called **DMA**.
+- DMA transfers are performed by a control circuit that is *part of the I/O device interface* called **DMA controller**.
+- For each word transferred, processor provides the memory address and all the bus signals that control data transfer. DMA controller will take the permission from the CPU to take control of the system bus. Since DMA controller has to transfer blocks of data, the DMA controller must *increment the memory address* for successive words and keep track of the *number of transfers*.
+
+DMA controller has number of registers that are informed by the processor to initiate data transfer.
+
+![[Pasted image 20240424180234.png]]
+- **Starting Address**: Tells from where to start block transfer
+- **Word Count**: Tells length of the transfer. It is decremented for each transfer. When Word count == 0 transfer is stopped.
+- The **R/W** bit determines the direction of the transfer. When this bit is set to 1 by a program instruction, the controller performs a read operation, that is, it transfers data from the memory to the I/O device, else write operation.
+- When the controller has *completed transferring a block of data* and is ready to receive another command, it sets the **Done** flag to 1.
+- Bit 30 is the **Interrupt-enable flag, IE**. When this flag is set to 1, it causes the *controller to raise an interrupt* after it has completed transferring a block of data.
+- The controller sets the **IRQ** bit to 1 when it has requested an interrupt.
+
+![[Pasted image 20240424183607.png]]
+
+- When transfer of data between peripheral and memory is needed, the peripheral places it's request to the DMA controller attached to it.
+- The DMA controller sends **Bus Request(HOLD)** signal to the CPU for releasing the control of the system bus.
+- The CPU responds to it by *terminating the current instruction execution*. Unlike interrupt which has lower priority the instruction will not be completely executed.
+- The *CPU initializes the DMA controller* by sending the following information through the data bus.
+	1. The starting address of the memory block where the data are available (for read) or where the data need to be stored (for write operation).
+	2. The word count which is the number of bytes in the memory block.
+	3. Control to specify mode of transfer such as read/write.
+- Then the CPU sends the **Bus Grant (HLDA)** signal to the DMAC, and releases the control of the system bus.
+﻿- After receiving the HLDA, the *DMA Controller informs the peripheral* and starts the operation.
+- It continues to transfer data between memory and peripheral unit until the entire block is transferred.
+- For each transfer, *memory address is incremented* and the *word count is decremented*.
+- When the count becomes zero, no more transfer take place.
+- After the transfer is over, the *DMA Controller sends an interrupt request* to the processor.
+- In response to this interrupts, processor takes back the control on the system bus.
+
+#### Modes of DMA transfer
+-  In **Cycle Stealing**, the DMA Controller takes the control of buses from CPU for transferring one word of data in *one cycle* and returns the control to the CPU.
+- Alternatively, the DMA controller may be given exclusive access to the main memory to transfer a block of data *without interruption*. This is known as **block** or **burst mode**.

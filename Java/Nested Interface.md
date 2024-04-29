@@ -3,7 +3,7 @@
 - The nested interface *must be referred to by the outer interface or class*. It can't be accessed directly.
 - Nested interfaces are implicitly **static** regardless of where they are declared (*inside class or another interface*).
 - Nested interface declared *inside another interface* is implicitly **public**.
-- Nested interface declared inside a class can accept any access modifiers.
+- Nested interface declared *inside a class* can accept **any access modifiers**.
 
 ### Nested Interface within another interface
 

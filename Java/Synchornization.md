@@ -163,7 +163,7 @@ good morning:Behera
 good morning:Behera
 ```
 
-##### Method synchronized on block level
+##### Block synchronized on class level
 
 ```java
 class Display {
