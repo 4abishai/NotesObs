@@ -1,20 +1,18 @@
 {
   "main": {
-    "id": "83f14cae06dc4028",
+    "id": "f3daf39e66d599a9",
     "type": "split",
     "children": [
       {
-        "id": "16001752fefd557c",
+        "id": "8fa9513f73d328de",
         "type": "tabs",
         "children": [
           {
-            "id": "2b3f3db253e643bf",
+            "id": "b88deb6f85715cb1",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "DSA/DP/img/Pasted image 20240307225351.png"
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -23,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "22cec1172f5df5f3",
+    "id": "dad81aa165390c17",
     "type": "split",
     "children": [
       {
-        "id": "f04d3ce1bfef6561",
+        "id": "ed0bb1d06de76ee6",
         "type": "tabs",
         "children": [
           {
-            "id": "879f025a0b2e9f84",
+            "id": "5b7b6245ba18d4ca",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -41,12 +39,12 @@
             }
           },
           {
-            "id": "8ee4e9910ad68198",
+            "id": "5000b20328595fcc",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Usage",
+                "query": "bipar",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,34 +54,34 @@
             }
           },
           {
-            "id": "e430e93cdde0ed86",
+            "id": "b68a24d976f60448",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 277.5
+    "width": 296.51103591918945
   },
   "right": {
-    "id": "0667195683b4df81",
+    "id": "ca128284d2ef23ae",
     "type": "split",
     "children": [
       {
-        "id": "0c7b68f84dc5547c",
+        "id": "d19b36c4b729d9e3",
         "type": "tabs",
         "children": [
           {
-            "id": "94fe615c37692292",
+            "id": "af140de5099658a7",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DSA/DP/img/Pasted image 20240307225351.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,19 +93,18 @@
             }
           },
           {
-            "id": "1eae8cba5b053306",
+            "id": "239664e1575368fd",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DSA/DP/img/Pasted image 20240307225351.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "740821e2b8eabe4c",
+            "id": "d339823e0c3a7920",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -118,13 +115,11 @@
             }
           },
           {
-            "id": "b9cf645e1d7c7a72",
+            "id": "6c8e6abe0dd5e33d",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "DSA/DP/img/Pasted image 20240307225351.png"
-              }
+              "state": {}
             }
           }
         ]
@@ -144,53 +139,49 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "879f025a0b2e9f84",
+  "active": "b88deb6f85715cb1",
   "lastOpenFiles": [
-    "DSA/DP/img",
-    "COA/Condition Code.md",
-    "MERN/React/img/Pasted image 20240524145345.png",
-    "MERN/React/img/Pasted image 20240509233456.png",
-    "MERN/JWT/img/Pasted image 20240509005438.png",
-    "MERN/Node/img/Pasted image 20240331163421.png",
-    "MERN/Node/img/Pasted image 20240331163140.png",
-    "MERN/Node/img/Pasted image 20240331162203.png",
-    "MERN/Node/img/Pasted image 20240331161751.png",
-    "MERN/Node/img/Pasted image 20240331161701.png",
-    "MERN/Node/img/Pasted image 20240318150959.png",
-    "MERN/Node/img/Pasted image 20240318150937.png",
-    "MERN/React/useCallback.md",
-    "MERN/React/img",
-    "MERN/React/React-2.md",
-    "MERN/React/Proxy.md",
-    "MERN/React/Children Prop.md",
-    "MERN/Node/path-module.md",
-    "MERN/Node/os-module.md",
-    "MERN/Node/img",
-    "MERN/Node/Streams.md",
-    "MERN/Node/Modules.md",
-    "MERN/Node/Gobals.md",
-    "MERN/Node/Event Loop.md",
-    "MERN/Node/Destructure.md",
-    "MERN/JWT/img",
-    "MERN/JWT/JWT.md",
-    "MERN/Express/img",
-    "MERN/Express/Static File Middleware.md",
-    "MERN/Express/Router.md",
-    "MERN/Express/Route Prameters.md",
-    "MERN/Express/Query Parameters.md",
-    "MERN/Express/PUT.md",
-    "MERN/Express/POST.md",
-    "MERN/Express/Middleware.md",
-    "MERN/Express/HTTP server with Node.md",
-    "MERN/Express/Express Basics.md",
-    "MERN/Express/DELETE.md",
-    "MERN/Express/Controller.md",
-    "MERN/Express/API JSON.md",
-    "MERN/React",
-    "MERN/Node",
-    "MERN/JWT",
-    "MERN/Express",
-    "MERN",
-    "DSA/DP"
+    "img/Pasted image 20240728200239.png",
+    "Graph/Bipartite Graph.md",
+    "Graph/Possible Bipartition.md",
+    "Graph/Path With Minimum Effort.md",
+    "Untitled 1.md",
+    "Bipartition.md",
+    "Graph/Disjoint Set (DSU).md",
+    "Graph/Swim in Rising Water.md",
+    "Graph/Longest Consecutive Sequence.md",
+    "Graph/Flood fill Algorithm.md",
+    "img/Pasted image 20240728200231.png",
+    "Graph/Couples Holding Hands.md",
+    "Largest Component by Common Factor.md",
+    "Graph/Minimize Connections.md",
+    "Maximum Path Sum from leaf nodes.md",
+    "Graph/Trajan's algorithm (Bridges in a graph).md",
+    "Graph/Number of Provinces 1.md",
+    "Graph/Making A Large Island.md",
+    "Graph/Evaluate Division.md",
+    "Boolean Parenthesization.md",
+    "img/Pasted image 20240715220036.png",
+    "Graph/Redundant Connection II.md",
+    "Graph/Account Merge.md",
+    "Graph/Articulation Point - I.md",
+    "img/Pasted image 20240728011150.png",
+    "Max Area of Island.md",
+    "DP/Knapsack/0-1 Knapsack.md",
+    "Graph/Strongly Connected Components (Kosaraju's Algo).md",
+    "Most Stones Removed with Same Row or Column.md",
+    "img/Pasted image 20240716123413.png",
+    "img/Pasted image 20240707131200.png",
+    "img/Pasted image 20240707131238.png",
+    "img/Pasted image 20240707131223.png",
+    "img/Pasted image 20240707131209.png",
+    "img/Pasted image 20240705143319.png",
+    "DP/Palindromic Subsequence",
+    "DP/LCS",
+    "DP/Knapsack",
+    "Graph",
+    "0-1 Knapsack (Fractional)",
+    "Greedy",
+    "Greedy"
   ]
 }

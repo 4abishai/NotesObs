@@ -1,37 +1,76 @@
 {
   "main": {
-    "id": "83f14cae06dc4028",
+    "id": "e0914503e807079d",
     "type": "split",
     "children": [
       {
-        "id": "16001752fefd557c",
+        "id": "9ed564c65a8d490b",
         "type": "tabs",
         "children": [
           {
-            "id": "2b3f3db253e643bf",
+            "id": "7efe64ba97e6aca8",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "DSA/DP/img/Pasted image 20240307225351.png"
+                "file": "Data Communications/Protocol Layering.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cd0e676e9a4403c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data Communications/OSI Model.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "166c63d952cb70e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Packet Switching.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "582b3780d6c4e7df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Performance.md",
+                "mode": "preview",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "22cec1172f5df5f3",
+    "id": "599428d677619f7a",
     "type": "split",
     "children": [
       {
-        "id": "f04d3ce1bfef6561",
+        "id": "01f98223d4f0f774",
         "type": "tabs",
         "children": [
           {
-            "id": "879f025a0b2e9f84",
+            "id": "05e48e2acdd8edba",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -41,12 +80,12 @@
             }
           },
           {
-            "id": "8ee4e9910ad68198",
+            "id": "d26765b3f8b293ce",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Usage",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,7 +95,7 @@
             }
           },
           {
-            "id": "e430e93cdde0ed86",
+            "id": "4f38430d81d27411",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -67,23 +106,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.5
+    "width": 200
   },
   "right": {
-    "id": "0667195683b4df81",
+    "id": "b89ea70a575060d7",
     "type": "split",
     "children": [
       {
-        "id": "0c7b68f84dc5547c",
+        "id": "d4a27069c0088865",
         "type": "tabs",
         "children": [
           {
-            "id": "94fe615c37692292",
+            "id": "c71e5191a63e8b67",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DSA/DP/img/Pasted image 20240307225351.png",
+                "file": "Performance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,19 +134,19 @@
             }
           },
           {
-            "id": "1eae8cba5b053306",
+            "id": "9511d31b9fd1af9b",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DSA/DP/img/Pasted image 20240307225351.png",
+                "file": "Performance.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "740821e2b8eabe4c",
+            "id": "c5832c4738981467",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -118,12 +157,12 @@
             }
           },
           {
-            "id": "b9cf645e1d7c7a72",
+            "id": "79a153fb2e768d2f",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "DSA/DP/img/Pasted image 20240307225351.png"
+                "file": "Performance.md"
               }
             }
           }
@@ -144,53 +183,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "879f025a0b2e9f84",
+  "active": "582b3780d6c4e7df",
   "lastOpenFiles": [
-    "DSA/DP/img",
-    "COA/Condition Code.md",
-    "MERN/React/img/Pasted image 20240524145345.png",
-    "MERN/React/img/Pasted image 20240509233456.png",
-    "MERN/JWT/img/Pasted image 20240509005438.png",
-    "MERN/Node/img/Pasted image 20240331163421.png",
-    "MERN/Node/img/Pasted image 20240331163140.png",
-    "MERN/Node/img/Pasted image 20240331162203.png",
-    "MERN/Node/img/Pasted image 20240331161751.png",
-    "MERN/Node/img/Pasted image 20240331161701.png",
-    "MERN/Node/img/Pasted image 20240318150959.png",
-    "MERN/Node/img/Pasted image 20240318150937.png",
-    "MERN/React/useCallback.md",
-    "MERN/React/img",
-    "MERN/React/React-2.md",
-    "MERN/React/Proxy.md",
-    "MERN/React/Children Prop.md",
-    "MERN/Node/path-module.md",
-    "MERN/Node/os-module.md",
-    "MERN/Node/img",
-    "MERN/Node/Streams.md",
-    "MERN/Node/Modules.md",
-    "MERN/Node/Gobals.md",
-    "MERN/Node/Event Loop.md",
-    "MERN/Node/Destructure.md",
-    "MERN/JWT/img",
-    "MERN/JWT/JWT.md",
-    "MERN/Express/img",
-    "MERN/Express/Static File Middleware.md",
-    "MERN/Express/Router.md",
-    "MERN/Express/Route Prameters.md",
-    "MERN/Express/Query Parameters.md",
-    "MERN/Express/PUT.md",
-    "MERN/Express/POST.md",
-    "MERN/Express/Middleware.md",
-    "MERN/Express/HTTP server with Node.md",
-    "MERN/Express/Express Basics.md",
-    "MERN/Express/DELETE.md",
-    "MERN/Express/Controller.md",
-    "MERN/Express/API JSON.md",
-    "MERN/React",
-    "MERN/Node",
-    "MERN/JWT",
-    "MERN/Express",
-    "MERN",
-    "DSA/DP"
+    "Untitled.md",
+    "Performance.md",
+    "Packet Switching.md",
+    "Data Communications/OSI Model.md",
+    "Untitled",
+    "Data Communications/Protocol Layering.md",
+    "().md",
+    "Data Communications/TCP IP PROTOCOL SUITE.md",
+    "Data Communications"
   ]
 }

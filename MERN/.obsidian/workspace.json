@@ -1,0 +1,245 @@
+{
+  "main": {
+    "id": "ff7f394abfec712a",
+    "type": "split",
+    "children": [
+      {
+        "id": "4dc1fbc848ebcbb6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09df805f50bd5d4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Express/Route Prameters.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "efbdfc9ad7f19865",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "React/React-2.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "391a53a27d38b794",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "React/React-2.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5f7f24ebb91827f4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Node/Streams.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c4e9ed6fbbfacfcb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Express/HTTP server with Node.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "20004fd3ae3aa620",
+    "type": "split",
+    "children": [
+      {
+        "id": "f100d90b1f9840af",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb2d8b4701e78fdd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "42fb8e9c24692df9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2e33674c7eacaafe",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "7d3fc64ca742a4c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "1df80af9f094ebb5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a28e87e65e2ccd78",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Express/HTTP server with Node.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "461f360e24161d82",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Express/HTTP server with Node.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0cd7947c9978d6d9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "82ee674eeeb1ad77",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Express/HTTP server with Node.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c4e9ed6fbbfacfcb",
+  "lastOpenFiles": [
+    "React/Proxy.md",
+    "Express/Route Prameters.md",
+    "React/img/Pasted image 20240524145345.png",
+    "Node/Streams.md",
+    "Untitled",
+    "React/useCallback.md",
+    "React/img",
+    "React/img/Pasted image 20240509233456.png",
+    "React/React-2.md",
+    "JWT/JWT.md",
+    "Express/Controller.md",
+    "img.md",
+    "JWT/img",
+    "JWT/img/Pasted image 20240509005438.png",
+    "JWT",
+    "Express/img/Pasted image 20240430171412.png",
+    "Express/PUT.md",
+    "Express/DELETE.md",
+    "Express/Query Parameters.md",
+    "Express/Middleware.md",
+    "Express/Express Basics.md",
+    "Express/HTTP server with Node.md",
+    "Express/Static File Middleware.md",
+    "Node/Destructure.md",
+    "Node/Event Loop.md",
+    "Node/Gobals.md",
+    "Node/Modules.md",
+    "Node/os-module.md",
+    "Node/path-module.md",
+    "React/Children Prop.md",
+    "React",
+    "Express/Router.md",
+    "Express/API JSON.md",
+    "Express/POST.md",
+    "Express/img/Pasted image 20240429211620.png",
+    "Express/img/Pasted image 20240428235826.png",
+    "Express/img",
+    "Express/img/Pasted image 20240428235841.png",
+    "Express",
+    "Node",
+    "Node/img/Pasted image 20240331161701.png",
+    "Node/img",
+    "Node/img/Pasted image 20240331161751.png",
+    "Node/img/Pasted image 20240331162203.png"
+  ]
+}
