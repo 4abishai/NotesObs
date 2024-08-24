@@ -4,18 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "8fa9513f73d328de",
+        "id": "5e84bf6836cf2164",
         "type": "tabs",
         "children": [
           {
-            "id": "b88deb6f85715cb1",
+            "id": "2065d5874c3d79c7",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Sliding Window/Fixed Size Window/Max Sum Subarray of size K.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "38d6c06d3e4b8ad3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Find All Anagrams in a String.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "831e9a895644755f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sliding Window/Fixed Size Window/Sliding Window Maximum.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -44,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bipar",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,12 +90,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 296.51103591918945
+    "width": 316.51103591918945
   },
   "right": {
     "id": "ca128284d2ef23ae",
@@ -82,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Sliding Window/Fixed Size Window/Sliding Window Maximum.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Sliding Window/Fixed Size Window/Sliding Window Maximum.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +149,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Sliding Window/Fixed Size Window/Sliding Window Maximum.md"
+              }
             }
           }
         ]
@@ -139,49 +171,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b88deb6f85715cb1",
+  "active": "5b7b6245ba18d4ca",
   "lastOpenFiles": [
+    "Find All Anagrams in a String.md",
+    "Sliding Window/Fixed Size Window/Sliding Window Maximum.md",
+    "Sliding Window/Fixed Size Window/Max Sum Subarray of size K.md",
+    "Sliding Window/Fixed Size Window/First negative in every window of size k.md",
+    "Untitled.md",
+    "Greedy/Huffman Code.md",
+    "Palindrome Partitioning.md",
+    "Trees/Maximum Path Sum from leaf nodes.md",
+    "Trees",
+    "Graph/Largest Component by Common Factor.md",
+    "Bipartition.md",
+    "Graph/Most Stones Removed with Same Row or Column.md",
+    "DP/Matrix Chain Multiplication/Boolean Parenthesization.md",
+    "DP/Matrix Chain Multiplication",
+    "Graph/Lexicographically Smallest Equivalent String.md",
+    "Graph/Disjoint Set (DSU).md",
+    "Sliding Window/Variable Size Window",
+    "Sliding Window/Fixed Size Window",
+    "Sliding Window",
+    "Graph/Bricks Falling When Hit.md",
+    "Graph/Regions Cut By Slashes.md",
+    "img/Pasted image 20240801000158.png",
+    "Graph/Swim in Rising Water.md",
+    "Graph/Couples Holding Hands.md",
+    "Graph/Path With Minimum Effort.md",
     "img/Pasted image 20240728200239.png",
     "Graph/Bipartite Graph.md",
     "Graph/Possible Bipartition.md",
-    "Graph/Path With Minimum Effort.md",
-    "Untitled 1.md",
-    "Bipartition.md",
-    "Graph/Disjoint Set (DSU).md",
-    "Graph/Swim in Rising Water.md",
     "Graph/Longest Consecutive Sequence.md",
     "Graph/Flood fill Algorithm.md",
     "img/Pasted image 20240728200231.png",
-    "Graph/Couples Holding Hands.md",
-    "Largest Component by Common Factor.md",
     "Graph/Minimize Connections.md",
-    "Maximum Path Sum from leaf nodes.md",
     "Graph/Trajan's algorithm (Bridges in a graph).md",
     "Graph/Number of Provinces 1.md",
-    "Graph/Making A Large Island.md",
-    "Graph/Evaluate Division.md",
-    "Boolean Parenthesization.md",
     "img/Pasted image 20240715220036.png",
-    "Graph/Redundant Connection II.md",
-    "Graph/Account Merge.md",
-    "Graph/Articulation Point - I.md",
     "img/Pasted image 20240728011150.png",
-    "Max Area of Island.md",
-    "DP/Knapsack/0-1 Knapsack.md",
-    "Graph/Strongly Connected Components (Kosaraju's Algo).md",
-    "Most Stones Removed with Same Row or Column.md",
     "img/Pasted image 20240716123413.png",
     "img/Pasted image 20240707131200.png",
     "img/Pasted image 20240707131238.png",
     "img/Pasted image 20240707131223.png",
     "img/Pasted image 20240707131209.png",
-    "img/Pasted image 20240705143319.png",
     "DP/Palindromic Subsequence",
     "DP/LCS",
     "DP/Knapsack",
     "Graph",
-    "0-1 Knapsack (Fractional)",
-    "Greedy",
-    "Greedy"
+    "0-1 Knapsack (Fractional)"
   ]
 }

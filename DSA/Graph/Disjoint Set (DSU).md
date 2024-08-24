@@ -1,5 +1,6 @@
 Disjoint Set data structure, also known as a Union-Find data structure is used to efficiently manage a collection of disjoint sets and perform operations like union and find on them.
 
+#DSU 
 #### Union By Rank
 ```cpp
 #include <bits/stdc++.h>

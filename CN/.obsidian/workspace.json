@@ -4,59 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "9ed564c65a8d490b",
+        "id": "1353594ccd395603",
         "type": "tabs",
         "children": [
           {
-            "id": "7efe64ba97e6aca8",
+            "id": "e9fb8b03c31f1377",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Data Communications/Protocol Layering.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cd0e676e9a4403c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Communications/OSI Model.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "166c63d952cb70e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Packet Switching.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "582b3780d6c4e7df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Performance.md",
-                "mode": "preview",
-                "source": false
+                "file": "img/Pasted image 20240824161944.png"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -85,7 +46,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "propagation speed",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Performance.md",
+                "file": "img/Pasted image 20240824161944.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Performance.md",
+                "file": "img/Pasted image 20240824161944.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Performance.md"
+                "file": "img/Pasted image 20240824161944.png"
               }
             }
           }
@@ -183,16 +144,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "582b3780d6c4e7df",
+  "active": "05e48e2acdd8edba",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Performance.md",
-    "Packet Switching.md",
-    "Data Communications/OSI Model.md",
-    "Untitled",
-    "Data Communications/Protocol Layering.md",
+    "Transportation Layer/Transport Layer Protocols.md",
+    "img/Pasted image 20240825030512.png",
+    "img/Pasted image 20240825025302.png",
+    "img/Pasted image 20240825024516.png",
+    "Transportation Layer/Transport Layer Services.md",
+    "img/Pasted image 20240825021546.png",
+    "img/Pasted image 20240825021029.png",
+    "img/Pasted image 20240824203618.png",
+    "img/Pasted image 20240824203324.png",
+    "img/Pasted image 20240824203134.png",
+    "img/Pasted image 20240824203123.png",
+    "img/Pasted image 20240824203102.png",
+    "Data Communications/Signals.md",
+    "Data Communications/Performance.md",
+    "Data Communications/Packet Switching.md",
+    "Introduction/OSI Model.md",
+    "Transportation Layer",
+    "Introduction/Protocol Layering.md",
+    "Introduction/TCP IP PROTOCOL SUITE.md",
+    "Application Layer/Electronic Mail.md",
+    "Data Communications/Problem_and_Solution_from_Chapter_1(1).pdf",
+    "Application Layer/DNS.md",
+    "Application Layer/Client-Server Paradigm.md",
+    "Application Layer/World Wide Web and HTTP.md",
+    "Introduction",
+    "img",
+    "Application Layer",
     "().md",
-    "Data Communications/TCP IP PROTOCOL SUITE.md",
     "Data Communications"
   ]
 }

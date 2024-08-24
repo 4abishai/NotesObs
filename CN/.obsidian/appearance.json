@@ -1,4 +1,9 @@
 {
-  "cssTheme": "Obsidian Nord",
-  "accentColor": "#e13762"
+  "cssTheme": "Ayu Light & Mirage",
+  "accentColor": "#e13762",
+  "enabledCssSnippets": [],
+  "interfaceFontFamily": "IBM Plex Sans",
+  "baseFontSize": 16,
+  "monospaceFontFamily": "IBM Plex Sans",
+  "textFontFamily": "Roboto"
 }
