@@ -1,19 +1,31 @@
 {
   "main": {
-    "id": "0e5f2a2e2351159d",
+    "id": "e0914503e807079d",
     "type": "split",
     "children": [
       {
-        "id": "ea0903d1a9421c70",
+        "id": "83517c3c6c6420b0",
         "type": "tabs",
         "children": [
           {
-            "id": "7400ffb19e285a84",
+            "id": "48956ec163fba477",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Concepts.md",
+                "file": "UNIT II/Layered Protocol.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c252250cefbce792",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Code.md",
                 "mode": "preview",
                 "source": false
               }
@@ -25,15 +37,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "31553de2a93f4f47",
+    "id": "599428d677619f7a",
     "type": "split",
     "children": [
       {
-        "id": "7644f4ae7dfb33ca",
+        "id": "01f98223d4f0f774",
         "type": "tabs",
         "children": [
           {
-            "id": "cf7f852ddbf52191",
+            "id": "05e48e2acdd8edba",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +55,7 @@
             }
           },
           {
-            "id": "7738be67559071de",
+            "id": "d26765b3f8b293ce",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +70,7 @@
             }
           },
           {
-            "id": "92edc3a2bf768c0c",
+            "id": "4f38430d81d27411",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,23 +81,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 200
   },
   "right": {
-    "id": "ceb690e0ae525916",
+    "id": "b89ea70a575060d7",
     "type": "split",
     "children": [
       {
-        "id": "84eabd852e4262d8",
+        "id": "d4a27069c0088865",
         "type": "tabs",
         "children": [
           {
-            "id": "3a451c4b239252ed",
+            "id": "c71e5191a63e8b67",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Concepts.md",
+                "file": "UNIT II/Layered Protocol.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +109,19 @@
             }
           },
           {
-            "id": "508061180d0a86c8",
+            "id": "9511d31b9fd1af9b",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Software Concepts.md",
+                "file": "UNIT II/Layered Protocol.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "b36f3aabe1ca12f7",
+            "id": "c5832c4738981467",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,12 +132,12 @@
             }
           },
           {
-            "id": "ce523b43bb64f8c8",
+            "id": "79a153fb2e768d2f",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Software Concepts.md"
+                "file": "UNIT II/Layered Protocol.md"
               }
             }
           }
@@ -146,20 +158,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7400ffb19e285a84",
+  "active": "05e48e2acdd8edba",
   "lastOpenFiles": [
-    "Layered Protocol.md",
-    "Pasted image 20240819234056.png",
-    "Software Concepts.md",
-    "Asynchronous Transfer Mode (ATM) Networks.md",
-    "Pasted image 20240819233853.png",
-    "Pasted image 20240819232640.png",
-    "Pasted image 20240819222956.png",
-    "Pasted image 20240819221223.png",
-    "Pasted image 20240819170116.png",
-    "Pasted image 20240819165823.png",
-    "Pasted image 20240819152250.png",
-    "Untitled",
-    "Welcome.md"
+    "appointment-scheduling-decision-table.md",
+    "hospital-management-system-srs(1).md",
+    "hospital-management-system-srs.md",
+    "Code.md",
+    "UNIT II/Asynchronous Transfer Mode (ATM) Networks.md",
+    "UNIT II/Reliable vs Unreliable Primitives.md",
+    "UNIT II/Layered Protocol.md",
+    "UNIT II/Client-Server Model.md",
+    "UNIT II/Buffered vs Unbuffered Primitives.md",
+    "UNIT II/Blocking versus Nonblocking Primitives.md",
+    "QUESTIONS (I).md",
+    "UNIT I/Software Concepts.md",
+    "Pasted image 20240829020113.png",
+    "Pasted image 20240829020100.png",
+    "Pasted image 20240829014840.png",
+    "Pasted image 20240829014605.png",
+    "Pasted image 20240829014441.png",
+    "Untitled 1.md",
+    "img/Pasted image 20240828114121.png",
+    "UNIT I",
+    "img/Pasted image 20240828115529.png",
+    "img/Pasted image 20240828114330.png",
+    "img/Pasted image 20240828114155.png",
+    "img/Pasted image 20240828114146.png",
+    "UNIT II",
+    "templates/template.md",
+    "templates",
+    "img",
+    "Transportation Layer/Transport Layer Services.md",
+    "Transportation Layer/Transport Layer Protocols.md",
+    "Data Communications/Signals.md",
+    "Data Communications/Performance.md",
+    "Data Communications/Packet Switching.md",
+    "Introduction/OSI Model.md",
+    "Transportation Layer",
+    "Introduction/Protocol Layering.md",
+    "Introduction/TCP IP PROTOCOL SUITE.md",
+    "Application Layer/Electronic Mail.md",
+    "Data Communications/Problem_and_Solution_from_Chapter_1(1).pdf",
+    "Application Layer/DNS.md",
+    "Application Layer/Client-Server Paradigm.md",
+    "Application Layer/World Wide Web and HTTP.md",
+    "Introduction",
+    "img",
+    "Application Layer",
+    "Data Communications"
   ]
 }

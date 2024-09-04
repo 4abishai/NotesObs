@@ -1,3 +1,11 @@
 {
-  "cssTheme": "ITS Theme"
+  "cssTheme": "AnuPpuccin",
+  "accentColor": "",
+  "enabledCssSnippets": [],
+  "interfaceFontFamily": "IBM Plex Sans",
+  "baseFontSize": 16,
+  "monospaceFontFamily": "IBM Plex Sans",
+  "textFontFamily": "IBM Plex Sans,Roboto",
+  "theme": "obsidian",
+  "showViewHeader": true
 }

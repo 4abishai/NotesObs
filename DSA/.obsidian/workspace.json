@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "longest subseq",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +90,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -110,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sliding Window/Fixed Size Window/Sliding Window Maximum.md",
+                "file": "Sliding Window/Fixed Size Window/Max Sum Subarray of size K.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sliding Window/Fixed Size Window/Sliding Window Maximum.md",
+                "file": "Sliding Window/Fixed Size Window/Max Sum Subarray of size K.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sliding Window/Fixed Size Window/Sliding Window Maximum.md"
+                "file": "Sliding Window/Fixed Size Window/Max Sum Subarray of size K.md"
               }
             }
           }
@@ -171,7 +172,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5b7b6245ba18d4ca",
+  "active": "5000b20328595fcc",
   "lastOpenFiles": [
     "Find All Anagrams in a String.md",
     "Sliding Window/Fixed Size Window/Sliding Window Maximum.md",

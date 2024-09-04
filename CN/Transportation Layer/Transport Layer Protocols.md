@@ -53,45 +53,6 @@
 #### Finite State Machines (FSMs)
 - Since this is a connection-oriented protocol, both the sender and receiver FSMs have to be in the "established" state before any data exchange can occur.
 ![[Pasted image 20240824171447.png]]
-##### Sender FSM States:
-
-1. ***Ready State:***
-   - **Initial State:** The sender starts in the ready state, with the sequence number `S` initialized to 0.
-   - **Event:** A request from the application layer.
-   - **Actions:**
-     1. Create a packet with the sequence number set to `S`.
-     2. Store a copy of the packet.
-     3. Send the packet.
-     4. Start the timer.
-   - **Transition:** The sender moves to the **blocking state** after sending the packet.
-
-2. ***Blocking State:***
-     - **Error-free ACK arrives with `ackNo = (S + 1) modulo 2`:**
-        1. Stop the timer.
-        2. Slide the window: Update `S = (S + 1) modulo 2`.
-        3. **Transition:** Move back to the **ready state**.
-     - **Corrupted ACK or ACK with `ackNo ≠ (S + 1) modulo 2` arrives:**
-        1. Discard the ACK.
-        2. **No state change** occurs; remain in the blocking state.
-     - **Timeout occurs:**
-        1. Resend the outstanding packet.
-        2. Restart the timer.
-        3. **No state change** occurs; remain in the blocking state.
-
-##### Receiver FSM States:
-
-1. ***Ready State:***
- - **Error-free packet with `seqNo = R` arrives:**
-	1. Deliver the message to the application layer.
-	2. Slide the window: Update `R = (R + 1) modulo 2`.
-	3. Send an ACK with `ackNo = R`.
- -  **Error-free packet with `seqNo ≠ R` arrives:**
-	1. Discard the packet.
-	2. Send an ACK with `ackNo = R`.
- -  **Corrupted packet arrives:**
-	1. Discard the packet.
-	2. **No state change** occurs; remain in the ready state.
-
 `corrupted -> Discard; Do nothing.`
 
 - **Sender:** The sender alternates between the ready and blocking states, depending on whether it has a packet waiting for acknowledgment or if it is ready to send a new packet. The sender manages the flow of data and error control by waiting for ACKs and handling timeouts.
@@ -151,67 +112,16 @@ The **Go-Back-N (GBN) Protocol** is a sliding window protocol that allows multip
    - For example, if `Sf = 3` and `Sn = 7`, the sender will resend packets 3, 4, 5, and 6.
 
 #### FSM
-
-![[Pasted image 20240825021546.png]]
+![[Pasted image 20240825111738.png]]
 ##### Sender FSM:
-Both variables are initialized to 0 (`Sf = Sn = 0`).
 
 `corrupted -> Discard; Do nothing.`
-###### 1. Ready State:
+`out of order -> Discard; Do nothing.`
 
-1. **Application Layer Request:**
-   - **Action:** The sender creates a packet with the sequence number `Sn`, stores a copy of the packet, and sends it.
-   - **Next Step:** 
-     - If the timer is not already running, it starts.
-     - Increment `Sn`: `Sn = (Sn + 1) modulo 2^m`.
-     - *If the window becomes full (`Sn = (Sf + Ssize) modulo 2^m`), transition to the* **Blocking State**.
+#### Receiver FSM:
 
-2. **Error-free ACK Received:**
-   - **Action:**
-     - Slide the window: `Sf = ackNo`.
-     - If all outstanding packets are acknowledged (`ackNo = Sn`), stop the timer.
-     - If there are still outstanding packets, restart the timer.
-
-3. **Corrupted or Unrelated ACK Received:**
-   - **Condition:** The ACK is either corrupted or its `ackNo` does not match any outstanding packets.
-   - **Action:** Discard the ACK.
-
-4. **Timeout Occurs:**
-   - **Action:** Resend all outstanding packets and restart the timer.
-
-###### 2. Blocking State:*
-While in the blocking state, three possible events can occur:
-
-1. **Error-free ACK Received:**
-   - **Action:**
-     - Slide the window: `Sf = ackNo`.
-     - If all outstanding packets are acknowledged (`ackNo = Sn`), stop the timer.
-     - If there are still outstanding packets, restart the timer.
-   - **Next Step:** Transition to the **Ready State**.
-
-2. **Corrupted or Unrelated ACK Received:**
-   - **Condition:** The ACK is either corrupted or its `ackNo` does not match any outstanding packets.
-   - **Action:** Discard the ACK.
-
-3. **Timeout Occurs:**
-   - **Action:** Resend all outstanding packets and restart the timer.
-
-##### Receiver FSM:
-The variable is initialized to 0 (`Rn = 0`).
-
-1. **Error-free Packet with `seqNo = Rn` Arrives:**
-   - **Action:** 
-     - Deliver the message in the packet to the application layer.
-     - Slide the window: `Rn = (Rn + 1) modulo 2^m`.
-     - Send an ACK with `ackNo = Rn`.
-
-2. **Error-free Packet with `seqNo` Outside the Window Arrives:**
-   - **Action:** 
-     - Discard the packet.
-     - Send an ACK with `ackNo = Rn`.
-
-3. **Corrupted Packet Arrives:**
-   - **Action:** Discard the packet.
+`corrupted -> Discard; Do nothing.`
+`out of order -> Discard; Send ACK = Rn`
 
 #### Send Window Size
 
@@ -243,3 +153,73 @@ When the time-out occurs, the sender resends packets 1, 2, and 3, which are ackn
 - In other words, m = 1 and 2m − 1 = 1. In Go-Back-N, we said that the arithmetic is modulo 2m; in Stop-and-Wait it is modulo 2, which is the same as 2m when m = 1.
 
 --- 
+### Selective Repeat Protocol
+The Selective-Repeat (SR) Protocol is designed to address the inefficiencies of the Go-Back-N (GBN) protocol, particularly in situations where packet loss is frequent. 
+
+1. **Selective Resending:**
+   - Unlike GBN, where a single lost packet results in the retransmission of all subsequent packets, SR retransmits only the specific packet that was lost or corrupted. This selective resending reduces unnecessary data transmission, making SR more efficient, especially in high-loss environments.
+
+2. **Send and Receive Windows:**
+   - Both the sender and receiver maintain windows, but with key differences compared to GBN:
+     - **Send Window:** 
+       - The size of the send window in SR is \(2^{m-1}\), where \(m\) is the number of bits in the sequence number. For instance, if \(m = 4\), the sequence numbers range from 0 to 15, but the maximum size of the window is 8.
+       - This reduced window size ensures that even if packets arrive out of order, they can be properly managed without ambiguity.
+     - **Receive Window:**
+       - The receive window is the same size as the send window.
+
+3. **Timer Mechanism:**
+   - Ideally, SR would use a separate timer for each outstanding packet, which would allow for precise retransmission of only the lost packet when its timer expires. However, in practice, many implementations use a single timer for simplicity, similar to GBN.
+
+4. **Acknowledgments (ACKs):**
+   - **Cumulative vs. Individual ACKs:**
+     - In GBN, ACKs are cumulative; the receiver acknowledges the highest sequence number of packets received in order, implying all previous packets have been received correctly.
+     - In SR, each ACK corresponds to a specific packet. This means that the receiver sends an ACK for each correctly received packet, regardless of whether it is in order or not. This allows the sender to know exactly which packets need to be retransmitted.
+![[Pasted image 20240825160025.png]]
+#### Advantages of Selective-Repeat Protocol:
+
+- **Efficiency:** SR is more bandwidth-efficient than GBN in scenarios where packet loss is high, as it avoids unnecessary retransmissions.
+- **Reliability:** The protocol ensures that out-of-order packets are handled correctly, maintaining the integrity and order of data delivery.
+- **Flexibility:** SR is better suited for networks with variable or unpredictable packet loss, as it allows for more granular control over retransmissions.
+
+#### Disadvantages:
+
+- **Complexity:** SR is more complex to implement than GBN, particularly in managing multiple timers and handling out-of-order packets at the receiver.
+- **Memory Usage:** The receiver must have enough buffer space to store out-of-order packets until the missing packets are received.
+
+#### FSM
+![[Pasted image 20240825161345.png]]
+
+---
+- A reliable transport layer promises to deliver packets in order.
+	- At the receiver site we need to distinguish between the acceptance of a packet and its delivery to the application layer. 
+- There are two conditions for the delivery of packets to the application layer:
+	1. *A set of consecutive packets must have arrived*. 
+	2. *The set starts from the beginning of the window.* 
+
+At the second arrival, packet 2 arrives and is stored and marked (shaded slot), but it cannot be delivered because packet 1 is missing. At the next arrival, packet 3 arrives and is marked and stored, but still none of the packets can be delivered. Only at the last arrival, when finally a copy of packet 1 arrives, can packets 1, 2, and 3 be delivered to the application layer. 
+![[Pasted image 20240825161444.png]]
+
+---
+#### Window Sizes in Selective-Repeat Protocol
+  
+  - For \(m = 2\), the sequence numbers range from 0 to \(2^m - 1 = 3\).
+
+1. **Window Size = 2:**
+   - **Scenario:**
+     - Suppose all acknowledgments are lost.
+     - The sender's timer for packet 0 expires, and it resends packet 0.
+   - **Receiver's Perspective:**
+     - The receiver's window is now expecting packet 2.
+     - Since the sequence number 0 is not in the receiver's window, the duplicate packet 0 is correctly discarded.
+     - This ensures that no erroneous data is accepted.
+
+2. **Window Size = 3:**
+   - **Scenario:**
+     - Again, assume all acknowledgments are lost.
+     - The sender resends packet 0.
+   - **Receiver's Perspective:**
+     - The receiver's window is expecting packet 0 (because 0 is part of the window when the size is 3).
+     - The receiver mistakenly accepts this duplicate packet 0 as a new packet in the next cycle.
+   - **Error:** This situation introduces a significant error because the receiver cannot distinguish between a retransmitted packet and a new one in the next cycle. This results in the wrong data being processed.
+	![[Pasted image 20240825163529.png]]
+---

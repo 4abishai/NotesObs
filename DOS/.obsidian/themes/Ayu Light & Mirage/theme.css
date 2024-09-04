@@ -1,7 +1,7 @@
 body {
   --font-text-theme: Lora;
   --font-interface-theme: Inter;
-  --font-monospace-theme: Monaspace Neon;
+  --font-monospace-theme: 'JetBrains Mono', monospace;
 }
 
 .theme-dark {

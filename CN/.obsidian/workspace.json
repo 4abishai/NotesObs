@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "1353594ccd395603",
+        "id": "da6a6b4ea7d5b40b",
         "type": "tabs",
         "children": [
           {
-            "id": "e9fb8b03c31f1377",
+            "id": "5822cf5e9d40079a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "img/Pasted image 20240824161944.png"
+                "file": "TCP.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -46,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "propagation speed",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -67,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "b89ea70a575060d7",
@@ -83,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "img/Pasted image 20240824161944.png",
+                "file": "TCP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "img/Pasted image 20240824161944.png",
+                "file": "TCP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "img/Pasted image 20240824161944.png"
+                "file": "TCP.md"
               }
             }
           }
@@ -144,20 +147,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "05e48e2acdd8edba",
+  "active": "5822cf5e9d40079a",
   "lastOpenFiles": [
-    "Transportation Layer/Transport Layer Protocols.md",
-    "img/Pasted image 20240825030512.png",
-    "img/Pasted image 20240825025302.png",
-    "img/Pasted image 20240825024516.png",
+    "Pasted image 20240905032710.png",
+    "Pasted image 20240905031858.png",
+    "Pasted image 20240905031548.png",
+    "Pasted image 20240905031137.png",
+    "Pasted image 20240905030438.png",
+    "Pasted image 20240905030150.png",
+    "Pasted image 20240904225918.png",
+    "Pasted image 20240904225324.png",
+    "Pasted image 20240904114718.png",
+    "Pasted image 20240904111459.png",
+    "Pasted image 20240904111101.png",
+    "TCP.md",
     "Transportation Layer/Transport Layer Services.md",
-    "img/Pasted image 20240825021546.png",
-    "img/Pasted image 20240825021029.png",
-    "img/Pasted image 20240824203618.png",
-    "img/Pasted image 20240824203324.png",
-    "img/Pasted image 20240824203134.png",
-    "img/Pasted image 20240824203123.png",
-    "img/Pasted image 20240824203102.png",
+    "Transportation Layer/Transport Layer Protocols.md",
     "Data Communications/Signals.md",
     "Data Communications/Performance.md",
     "Data Communications/Packet Switching.md",

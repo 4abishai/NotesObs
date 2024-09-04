@@ -1,7 +1,9 @@
 {
-  "cssTheme": "Ayu Light & Mirage",
-  "accentColor": "#e13762",
-  "enabledCssSnippets": [],
+  "cssTheme": "AnuPpuccin",
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "margin"
+  ],
   "interfaceFontFamily": "IBM Plex Sans",
   "baseFontSize": 16,
   "monospaceFontFamily": "IBM Plex Sans",
