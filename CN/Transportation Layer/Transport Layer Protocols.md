@@ -20,9 +20,10 @@
     - ***Action:*** After sending the packet, the FSM returns to the ready state, waiting for the next message.
 
   - **Receiver FSM:**
-    - ***Ready State:*** The FSM stays in this state until a packet arrives from the sender.
-    - ***Event:*** When a packet arrives, the FSM decapsulates the message and delivers it to the application layer.
-    - ***Action:*** After delivering the message, the FSM returns to the ready state, waiting for the next packet.
+	- ***Ready State:*** The FSM stays in this state until a packet arrives from the sender.
+	- ***Event:*** When a packet arrives, the FSM decapsulates the message and delivers it to the application layer.
+	- ***Action:*** After delivering the message, the FSM returns to the ready state, waiting for the next packet.
+	
 ![[Pasted image 20240824162227.png]]
 
 ### Stop-and-Wait Protocol
@@ -69,6 +70,7 @@ The Stop-and-Wait protocol is very inefficient if our channel is thick and long,
 #### Pipelining
 - In networking and in other areas, a task is often begun before the previous task hasended. This is known as pipelining. 
 - There is no pipelining in the Stop-and-Wait protocol because a sender must wait for a packet to reach the destination and be acknowledged before the next packet can be sent. 
+	- As the window size is 1.
 - Pipelining improves the efficiency of the transmission if the number of bits in transition is large with respect to the bandwidth-delay product.
 
 ### Go-Back-N Protocol
@@ -129,7 +131,7 @@ The **Go-Back-N (GBN) Protocol** is a sliding window protocol that allows multip
   - **Why less than \(2^m\)?**
     - If the send window size equals \(2^m\), the sender could send packets with sequence numbers 0 to \(2^m - 1\) within one cycle.
     - If all ACKs for these packets are lost, the sender may resend packets with the same sequence numbers in the next cycle.
-    - **Error Scenario:** The *receiver, expecting packets from the next cycle, might mistakenly accept a retransmitted packet from the previous cycle as a new packet* in the current cycle. This misinterpretation could lead to *data corruption* or *loss*, as the receiver believes it’s receiving a new packet when it’s actually a duplicate.
+    - **Error Scenario:** ***The receiver, expecting packets from the next cycle, might mistakenly accept a retransmitted packet from the previous cycle as a new packet in the current cycle***. This misinterpretation could lead to *data corruption* or *loss*, as the receiver believes it’s receiving a new packet when it’s actually a duplicate.
 	![[Pasted image 20240825024516.png]]
 
 ---
@@ -157,13 +159,13 @@ When the time-out occurs, the sender resends packets 1, 2, and 3, which are ackn
 The Selective-Repeat (SR) Protocol is designed to address the inefficiencies of the Go-Back-N (GBN) protocol, particularly in situations where packet loss is frequent. 
 
 1. **Selective Resending:**
-   - Unlike GBN, where a single lost packet results in the retransmission of all subsequent packets, SR retransmits only the specific packet that was lost or corrupted. This selective resending reduces unnecessary data transmission, making SR more efficient, especially in high-loss environments.
+   - Unlike GBN, where a single lost packet results in the retransmission of all subsequent packets, *SR retransmits only the specific packet that was lost or corrupted*. This selective resending reduces unnecessary data transmission, making SR more efficient, especially in high-loss environments.
 
 2. **Send and Receive Windows:**
    - Both the sender and receiver maintain windows, but with key differences compared to GBN:
      - **Send Window:** 
        - The size of the send window in SR is \(2^{m-1}\), where \(m\) is the number of bits in the sequence number. For instance, if \(m = 4\), the sequence numbers range from 0 to 15, but the maximum size of the window is 8.
-       - This reduced window size ensures that even if packets arrive out of order, they can be properly managed without ambiguity.
+       - ***This reduced window size ensures that even if packets arrive out of order, they can be properly managed without ambiguity.***
      - **Receive Window:**
        - The receive window is the same size as the send window.
 

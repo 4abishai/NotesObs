@@ -46,15 +46,6 @@
    - Some authors define a synchronous primitive as one where the sender is blocked until the receiver has accepted the message and sent an acknowledgement.
    - In this view, everything else is considered asynchronous.
    - This definition focuses on the complete end-to-end transmission, including receiver acknowledgement.
-### Nonblocking receive:
-   - Returns control almost immediately, telling the kernel where the buffer is.
-   - **Challenges**: How does the caller know when the operation has completed?
-   - **Solutions**:
-	 - Provide an explicit ***wait primitive*** that allows the receiver to block when it wants to.
-	 - Offer a ***test primitive*** to allow the receiver to poll the kernel to check on the status.
-	 - Implement a ***conditional_receive***, which either gets a message or signals failure, but in any event returns immediately.
-	 - ***Interrupts*** can also be used to signal completion of a receive operation.
-	
 ### Timeouts:
    - In systems where send calls block, there's a risk of infinite blocking if no reply comes.
    - To prevent this, many systems allow the caller to specify a time interval within which it expects a reply.

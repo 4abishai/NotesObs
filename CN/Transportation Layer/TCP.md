@@ -44,7 +44,7 @@
 
 ### Segment
 #### Format
- The header is 20 bytes if there are no options and up to 60 bytes if it contains options.
+ - The header is 20 bytes if there are no options and up to 60 bytes if it contains options.
  ![[Pasted image 20240902202346.png]]
 **Header Length**
 - This 4-bit field indicates the number of 4-byte words in the TCP header. The length of the header can be between 20 and 60 bytes. Therefore, the value of this field is always between 5 (5 × 4 = 20) and 15 (15 × 4 = 60).
@@ -84,18 +84,18 @@ A TCP segment encapsulates the data received from the application layer. The TCP
 - The client sends the first segment, a SYN segment, with the SYN flag set.
 - The SYN segment is used for synchronizing sequence numbers and carries the client's initial sequence number (ISN).
 - This segment does not contain an acknowledgment number or define the window size.
-- It carries no data but consumes one sequence number.
+- *It carries no data but consumes one sequence number.*
 
 ###### Step 2: Server Sends SYN + ACK Segment:
 - The server responds with a SYN + ACK segment, setting both SYN and ACK flags.
 - This segment serves two purposes: initializing the server's sequence number and acknowledging the client's SYN segment.
 - The segment also defines the receive window size (rwnd) for the client.
-- Like the SYN segment, it does not carry data but consumes one sequence number.
+- *Like the SYN segment, it does not carry data but consumes one sequence number.*
 
 ###### Step 3: Client Sends ACK Segment:
 - The client sends the third segment, an ACK segment, to acknowledge receipt of the server's SYN + ACK segment.
-- If this segment carries no data, it consumes no sequence number.
-- However, some implementations may allow this segment to carry the first chunk of data, consuming sequence numbers equivalent to the number of data bytes.
+- *If this segment carries no data, it consumes no sequence number.*
+- *However, some implementations may allow this segment to carry the first chunk of data, consuming sequence numbers equivalent to the number of data bytes.*
 
 ##### SYN Flooding Attack
 - Attackers send a large number of SYN segments to a server, pretending to be different clients by faking the source IP addresses.
@@ -131,9 +131,9 @@ A TCP segment encapsulates the data received from the application layer. The TCP
 - The FIN segment consumes one sequence number if it does not carry data.
 ###### Step 2: Server Sends FIN + ACK Segment:
 - This segment confirms the receipt of the client's FIN segment and simultaneously announces the closing of the connection in the opposite direction.
-- The FIN + ACK segment consumes only one sequence number if it does not carry data.
+- *The FIN + ACK segment consumes only one sequence number if it does not carry data.*
 ###### Step 3: Client Sends ACK Segment:
-- This segment cannot carry data and does not consume any sequence numbers.
+- *This segment cannot carry data and does not consume any sequence numbers.*
 
 ##### Half-Close
    ![[Pasted image 20240903233618.png]]
@@ -160,16 +160,16 @@ A TCP segment encapsulates the data received from the application layer. The TCP
 #### Send Window
 ![[Pasted image 20240904111101.png]]
 ##### Difference with SR send window
-1.  The window size in SR is the number of packets, but the window size in TCP is the number of bytes.
+1.  *The window size in SR is the number of packets, but the window size in TCP is the number of bytes.*
 2. TCP can store data received from the process and send them later.
 3. SR may use several timers for each packet sent, but TCP protocol uses only one timer.
 
 #### Receive Window
 ![[Pasted image 20240904111459.png]]
 
-- Receive window never shrinks.
-##### Difference with SR send window
-- TCP allows the receiving process to pull data at its own pace. The receive window size is then always smaller or equal to the buffer size. The receive window size determines the number of bytes that the receive window can accept from the sender before being overwhelmed (flow control).
+- *Receive window never shrinks.*
+##### Difference with SR receive window
+- *TCP allows the receiving process to pull data at its own pace.* The receive window size is then always smaller or equal to the buffer size. The receive window size determines the number of bytes that the receive window can accept from the sender before being overwhelmed (flow control).
 	`rwnd = buffer size − number of waiting bytes to be pulled`
 - TCP can use both selective and cumulative acknowledgement.
 
@@ -257,19 +257,21 @@ A TCP segment encapsulates the data received from the application layer. The TCP
 - In SR there is no possibility of window size adjustment based on the value of rwnd.
 ##### Receiver-Side FSM
 ![[Pasted image 20240905030438.png]]
-- In TCP unlike SR, there is delaying ACK in unidirectional communication.
-- In TCP unlike SR, immediate ACK must be sent if the receiver has some data to return.
+- *In TCP unlike SR, there is delaying ACK in unidirectional communication.*
+- *In TCP unlike SR, immediate ACK must be sent if the receiver has some data to return.*
 #### Scenarios
 ##### Normal Operation
 ![[Pasted image 20240905031137.png]]
 
 ##### Lost Segment
 ![[Pasted image 20240905031548.png]]
+- If RTO timer has expired the lost segment has similar working to that of SR.
 -  A lost or corrupted segment is treated the same way by the receiver. A lost segment is discarded somewhere in the network; a corrupted segment is discarded by the receiver itself.
 - Here, the RTO timer expires before receiving third duplicate acknowledgement.
 - The receiver TCP delivers only ordered data to the process.
 ##### Fast Retranssmission
 ![[Pasted image 20240905031858.png]]
+- The RTO timer must not expire and receive three duplicate ACKs for retransmission to occur.
 ##### Delayed Segment
 -  Delayed segments sometimes may time out and resent. 
 - If the delayed segment arrives after it has been resent, it is considered a duplicate segment and discarded.
@@ -277,7 +279,7 @@ A TCP segment encapsulates the data received from the application layer. The TCP
 - When a segment arrives that contains a sequence number equal to an already received and stored segment, it is discarded.
 ##### Automatically Corrected Lost ACK
 -  A lost acknowledgment may not even be noticed by the source TCP if RTO timer hasn't expired.
-- TCP uses cumulative acknowledgment.
+- *TCP uses cumulative acknowledgment.*
 	- The next acknowledgment automatically corrects the loss of the previous acknowledgment.
 
 ##### Lost Acknowledgment Corrected by Resending a Segment
@@ -291,3 +293,121 @@ A TCP segment encapsulates the data received from the application layer. The TCP
 	- **Deadlock Occurs:** The receiver assumes the sender has received the updated `rwnd` and waits for data, while the sender waits for an acknowledgment of a nonzero window. Both sides are waiting indefinitely.
 	- Since no retransmission timer is set in this scenario, the deadlock persists.
 - To prevent this issue, TCP uses a **persistence timer**. This timer ensures that the sender periodically probes the receiver to check if the window size has changed.
+
+
+### Congestion Control
+#### Congestion Window
+1. **Flow Control via Receiver Window (rwnd):** TCP uses the receive window (rwnd) to control the sender's transmission rate, ensuring the receiver’s buffer doesn’t overflow. 
+2. **Router Congestion:** Congestion can still occur in routers, even if there’s no receiver congestion. When routers become overwhelmed, they drop segments, increasing retransmissions and exacerbating congestion.
+3. **TCP’s Responsibility:** While congestion happens in IP (which lacks congestion control), TCP must manage network congestion to prevent communication collapse.
+4. **Balancing Data Transmission:** TCP must balance transmission—sending too aggressively worsens congestion, but being overly conservative underutilizes available bandwidth.
+5. **Congestion Window (cwnd):** TCP uses a variable, **cwnd**, to manage congestion in the network. The sender’s window size is the smaller of **rwnd** (receiver window) and **cwnd** (congestion window).
+6. **Effective Window Size:** The actual send window size is determined by the minimum of **rwnd** and **cwnd**.
+
+#### Congestion Detection
+1. **Congestion Detection Events:** TCP identifies network congestion through two main events: time-outs and receiving three duplicate ACKs.
+2. **Time-Out:** If the sender does not receive an ACK within a specified time, it assumes the segment(s) are lost due to congestion.
+3. **Three Duplicate ACKs:** Receiving three ACKs with the same acknowledgment number indicates a missing segment, suggesting potential congestion. However, this usually indicates less severe congestion compared to a time-out.
+4. **Congestion Severity:** Three duplicate ACKs imply that while one segment is missing, the network is not critically congested, or it has recovered. A time-out indicates stronger congestion.
+5. **TCP Versions:** The original Tahoe TCP treated time-outs and three duplicate ACKs similarly, while the later Reno TCP differentiates between the two events in its congestion control approach.
+6. **Feedback Mechanism:** TCP relies on ACKs to detect congestion—lack of timely ACKs suggests severe congestion, while multiple duplicate ACKs indicate milder congestion.
+
+#### Congestion Policies
+##### 1. Slow Start: Exponential Increase
+1. **Initial Congestion Window (cwnd):** The slow-start algorithm begins with a congestion window size (cwnd) of 1 Maximum Segment Size (MSS).
+2. **Exponential Growth:** For each received acknowledgment (ACK), the cwnd increases by 1 MSS. This results in exponential growth of the window size:
+![[Pasted image 20240915215226.png]]
+
+3. **Growth Rate:** The growth of cwnd is exponential relative to the number of RTTs, which makes this phase aggressive in increasing the transmission rate.
+4. **Slow-Start Threshold (ssthresh):** Slow start continues until the cwnd reaches a threshold value known as ssthresh. Once this threshold is reached, the slow-start phase ends and the algorithm transitions to a different phase.
+5. **Effect of Delayed ACKs:** If ACKs are delayed (e.g., cumulative ACKs for multiple segments), the increase in cwnd is less aggressive:
+   - With cumulative ACKs, cwnd increases by 1 MSS per ACK rather than per segment. Thus, the growth is still exponential but less pronounced compared to the ideal case where each ACK corresponds to a single segment.
+6. **Summary:** Slow start results in exponential growth of the congestion window until a threshold is reached, after which the growth rate changes. Delayed ACKs can slow down the effective growth rate of cwnd.
+![[Pasted image 20240915213404.png]]
+##### 2. Congestion Avoidance: Additive Increase
+1. **Purpose:** To slow down the exponential growth of the congestion window (cwnd) and avoid congestion, TCP introduces the congestion avoidance phase.
+2. **Transition:** When **cwnd** reaches the slow-start threshold (ssthresh), the algorithm transitions from slow start to congestion avoidance.
+3. **Additive Increase:** 
+   - In congestion avoidance, **cwnd** increases additively instead of exponentially.
+   - For every full window of segments acknowledged, **cwnd** is increased by 1 MSS.
+4. **Increment Formula:** 
+   - The increase in **cwnd** per acknowledgment is $$ \ \frac{1}{\text{cwnd}}  $$ MSS. 
+   - Therefore, the size of **cwnd** grows by 1 MSS every RTT, assuming a full window of segments is acknowledged.
+5. **Growth Rate:** 
+   - The growth rate of **cwnd** is linear with respect to the number of RTTs, which is more conservative than the exponential growth in the slow start phase.
+6. **Example:** 
+![[Pasted image 20240915215338.png]]
+7. **Behavior:** The congestion window increases linearly until congestion is detected. Upon detecting congestion, TCP may revert to slow start or adjust **ssthresh** and the growth strategy.
+![[Pasted image 20240915214738.png]]
+
+###### Fast Recovery
+-  Like congestion avoidance, this algorithm is also an additive increase, but it increases the size of the congestion window when a duplicate ACK arrives (after the three duplicate ACKs that trigger the use of this algorithm). 
+- If a duplicate ACK arrives, 
+	- cwnd = cwnd + (1 / cwnd).
+
+#### Types of TCP
+##### 1. Taho TCP
+![[Pasted image 20240915215959.png]]
+1. **Algorithms:** Taho TCP uses two algorithms for congestion control: slow start and congestion avoidance.
+	- This version of TCP emphasizes the combination of aggressive growth in slow start and more conservative growth in congestion avoidance 
+1. **Initial Conditions:** 
+   - Starts with **cwnd** = 1 MSS and **ssthresh** set to a pre-agreed value (typically a multiple of MSS).
+   - In the slow-start phase, **cwnd** increases exponentially by 1 MSS for each ACK received.
+2. **Congestion Detection:** 
+   - **Time-out** or receiving **three duplicate ACKs** signals congestion.
+   - Upon detecting congestion, Taho TCP resets **cwnd** to 1 MSS and sets **ssthresh** to half of the current **cwnd**.
+3. **Transition to Congestion Avoidance:** 
+   - Once **cwnd** reaches **ssthresh** without detecting further congestion, TCP transitions to congestion avoidance.
+4. **Congestion Avoidance Phase:** 
+   - In this phase, **cwnd** increases linearly by 1 MSS for every **cwnd** ACKs received.
+   - There is no fixed upper limit for **cwnd**; it grows conservatively until congestion is detected again.
+5. **Handling Congestion in Avoidance Phase:**
+   - On detecting congestion, **ssthresh** is set to half of the current **cwnd**.
+   - TCP then returns to the slow-start phase with the new **ssthresh** value.
+6. **Adjustment of ssthresh:** 
+   - The value of **ssthresh** can increase if congestion is detected and **cwnd** is larger than **ssthresh**. For example, if **ssthresh** was originally 8 MSS and **cwnd** is 20 MSS, the new **ssthresh** might be 10 MSS.
+##### 2. Reno TCP
+![[Pasted image 20240915222801.png]]
+1. **Introduction:** Reno TCP introduces the fast-recovery state to improve congestion control by handling congestion signals differently.
+2. **Congestion Detection:**
+	- **Time-Out:** Moves TCP to the slow-start state, similar to Taho TCP.
+	- **Three Duplicate ACKs:** Triggers the fast-recovery state instead of moving directly to slow start.
+3. **Fast-Recovery State:**
+	- **Behavior:** Functions between slow start and congestion avoidance.
+	- **cwnd Initialization:** Starts with **cwnd** set to **ssthresh** + 3 MSS, rather than 1 MSS as in slow start.
+	- **Growth:** While in fast recovery, **cwnd** grows exponentially as long as duplicate ACKs continue to arrive.
+4. **Events in Fast Recovery:**
+	- **More Duplicate ACKs:** **cwnd** continues to grow exponentially.
+	- **Time-Out:** TCP assumes severe congestion and reverts to the slow-start state.
+	- **New (Non-Duplicate) ACK:** Transition to congestion avoidance, but **cwnd** is deflated to **ssthresh**.
+5. **FSM Overview:** The fast-recovery state allows TCP to quickly recover from packet loss without a full return to slow start, leading to more efficient recovery and less drastic reductions in transmission rate.
+6. **FSM Simplification:** In the Reno TCP FSM, less critical events are omitted to focus on the key states and transitions.
+
+##### NewReno TCP
+1. **Optimization on Reno TCP:** NewReno improves upon Reno TCP by handling multiple segment losses more efficiently.
+   
+2. **Handling Duplicate ACKs:**
+   - When three duplicate ACKs arrive, NewReno retransmits the lost segment as in Reno.
+   - If the new (non-duplicate) ACK acknowledges all data up to the end of the window, NewReno assumes only one segment was lost.
+   - If the new ACK acknowledges data before the end of the window, NewReno assumes additional segments are lost and retransmits them without waiting for more duplicate ACKs.
+
+3. **Multiple Loss Recovery:** This allows NewReno to recover from multiple lost segments within the same window without returning to slow start, making it more efficient in handling packet loss.
+
+###### Additive Increase, Multiplicative Decrease (AIMD)
+1. **Additive Increase:** During congestion avoidance, for every ACK received, **cwnd** increases by a small amount (typically 1 MSS per RTT). This linear increase prevents overwhelming the network.
+   - Formula: \( \text{cwnd} = \text{cwnd} + \frac{1}{\text{cwnd}} \)
+
+2. **Multiplicative Decrease:** When congestion is detected (through time-out or three duplicate ACKs), **cwnd** is reduced by half to alleviate congestion.
+   - Formula: \( \text{cwnd} = \frac{\text{cwnd}}{2} \)
+
+3. **Sawtooth Pattern:** The combination of additive increase and multiplicative decrease creates a sawtooth pattern in the **cwnd** over time, gradually increasing during congestion avoidance and sharply decreasing when congestion is detected.
+
+4. **Dominance of AIMD:** In long TCP connections, the slow-start and fast-recovery phases are brief, so most of the time TCP operates under AIMD, which efficiently balances network utilization and congestion control.
+
+### TCP Throughput
+   - Given that the minimum **cwnd** is half of the maximum **cwnd**, the throughput can be more accurately calculated as:
+  $$ 
+   \text{Throughput} = \frac{0.75 \times W_{\text{max}}}{\text{RTT}}
+   $$
+   - Where Wmax is the maximum window size when congestion is detected.
+   - The factor of 0.75 reflects the reduction of **cwnd** after congestion is detected and the AIMD process.

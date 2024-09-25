@@ -16,7 +16,7 @@
 - Servers are assigned *Well known port numbers*,
 ![[Pasted image 20240824115659.png]]
 
-### ICANN Ranges
+### ICANN (Internet Corporation for Assigned Names and Numbers) Ranges
 
 - **Well-known ports**: The ports ranging from 0 to 1,023 are assigned and controlled by ICANN. These are the well-known ports.
 - **Registered ports**: The ports ranging from 1,024 to 49,151 are not assigned or controlled by ICANN. They can only be registered with ICANN to prevent duplication.
@@ -39,14 +39,14 @@
 ### Multiplexing and Demultiplexing
 
 - Entity accepts items from more than one source, this is referred to as **multiplexing** (many to one). The transport layer at the source performs multiplexing.
-- Entity accepts items from more than one source, this is referred to as **demultiplexing** (one to many). Transport layer at the destination performs demultiplexing.
+- Entity accepts items from one source, and distributed to many this is referred to as **demultiplexing** (one to many). Transport layer at the destination performs demultiplexing.
 ![[Pasted image 20240824120632.png]]
 
 ### Flow Control
 Whenever an entity produces items and another entity consumes them, there should be a balance between production and consumption rates.
 
 - **Pushing**:  If the sender delivers items whenever they are produced without a prior request from the consumer. *Requires flow control*.
-- **Pushing**:  If the producer delivers the items after the consumer has requested them. *Doesn't require flow control*.
+- **Pulling**:  If the producer delivers the items after the consumer has requested them. *Doesn't require flow control*.
 ![[Pasted image 20240824121845.png]]
 
 #### Flow Control at the transport layer:
@@ -113,6 +113,7 @@ Combining flow control and error control involves using numbered buffers and a s
 #### Sliding Window
 ![[Pasted image 20240824134419.png]]O
 
+- The *sender can send a number of packets equal to the window size before pausing for an acknowledgment*, which improves throughput and minimizes the idle time of the network link.
 - The sequence numbers, managed using modulo \(2^m\), are visualized as a circular buffer. This *buffer is represented by* **sliding window** *showing the range of sequence numbers currently being managed*.
 - The window size can vary depending on the specific protocol being used.
 - **Sender Buffer Management:**

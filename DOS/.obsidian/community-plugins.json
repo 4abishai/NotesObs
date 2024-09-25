@@ -1,5 +1,6 @@
 [
   "obsidian-style-settings",
   "obsidian-relative-line-numbers",
-  "highlightr-plugin"
+  "highlightr-plugin",
+  "obsidian-pandoc"
 ]

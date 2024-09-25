@@ -191,7 +191,7 @@ In communication systems, the choice between analog and digital transmission dep
 These conversions are essential for transmitting signals over channels that cannot directly carry the original digital or low-pass analog signals.
 
 #### 1. Digital-to-Analog  conversion
-A sine wave is defined by three characteristics: *amplitude, frequency,* and phase. **Digital-to-analog conversion** involves modifying one of the characteristics of an analog signal (typically a sine wave), giving us at least three mechanisms for modulating digital data into an analog signal
+A sine wave is defined by three characteristics: *amplitude, frequency,* and *phase*. **Digital-to-analog conversion** involves modifying one of the characteristics of an analog signal (typically a sine wave), giving us at least three mechanisms for modulating digital data into an analog signal
  encode digital data. Modulation techniques:
 
 -  **Amplitude Shift Keying (ASK)**
@@ -265,7 +265,7 @@ Beta is a factor the depends on modulation technique with a common value of 4.
 ![[Pasted image 20240810202002.png]]
 - Bandwidth is around,
 $$ 
-B_{FM} = 2(1 + \beta)B
+B_{PM} = 2(1 + \beta)B
 $$
 
 		Beta is:

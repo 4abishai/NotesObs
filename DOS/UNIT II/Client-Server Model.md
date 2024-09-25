@@ -83,7 +83,7 @@
 
 #### 6. Alternative approach
    - Use special hardware
-   - Network interface chips store process addresses
+   - **Network interface chips** store process addresses
    - Frames use process addresses instead of machine addresses
    - Network chip examines frame to see if the destination process is local
    ![[Pasted image 20240826173502.png]]

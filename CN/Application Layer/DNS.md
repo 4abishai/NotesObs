@@ -216,7 +216,7 @@ cords.
 	5. **Value**: Contains the information about the domain name.
 
 ![[Pasted image 20240808184445.png]]
-### DNS Messages
+### DNS Messages - Format
 DNS uses two types of messages to retrieve information about hosts: **query** and **response**. Both types share the same format, which includes the following:
 #### Header
 1. **Identification Field**: Used by the client to match the response with the query.

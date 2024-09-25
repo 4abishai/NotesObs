@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "83517c3c6c6420b0",
+        "id": "215b702eab03686c",
         "type": "tabs",
         "children": [
           {
-            "id": "48956ec163fba477",
+            "id": "2681512e92f5ac4c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNIT II/Layered Protocol.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c252250cefbce792",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Code.md",
+                "file": "QUESTIONS (I).md",
                 "mode": "preview",
                 "source": false
               }
@@ -60,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "line ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 368.5
   },
   "right": {
     "id": "b89ea70a575060d7",
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UNIT II/Layered Protocol.md",
+                "file": "QUESTIONS (I).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UNIT II/Layered Protocol.md",
+                "file": "QUESTIONS (I).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UNIT II/Layered Protocol.md"
+                "file": "QUESTIONS (I).md"
               }
             }
           }
@@ -158,32 +146,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "05e48e2acdd8edba",
+  "active": "2681512e92f5ac4c",
   "lastOpenFiles": [
-    "appointment-scheduling-decision-table.md",
-    "hospital-management-system-srs(1).md",
-    "hospital-management-system-srs.md",
-    "Code.md",
-    "UNIT II/Asynchronous Transfer Mode (ATM) Networks.md",
     "UNIT II/Reliable vs Unreliable Primitives.md",
     "UNIT II/Layered Protocol.md",
     "UNIT II/Client-Server Model.md",
     "UNIT II/Buffered vs Unbuffered Primitives.md",
     "UNIT II/Blocking versus Nonblocking Primitives.md",
-    "QUESTIONS (I).md",
+    "UNIT II/Asynchronous Transfer Mode (ATM) Networks.md",
     "UNIT I/Software Concepts.md",
-    "Pasted image 20240829020113.png",
-    "Pasted image 20240829020100.png",
-    "Pasted image 20240829014840.png",
-    "Pasted image 20240829014605.png",
-    "Pasted image 20240829014441.png",
+    "UNIT II/Asynchronous Transfer Mode (ATM) Networks.html",
+    "img/Asynchronous Transfer Mode (ATM) Networks.html",
+    "img/Pasted image 20240819221223.png",
+    "img/Asynchronous Transfer Mode (ATM) Networks.tex",
+    "img/Pasted image 20240826163227.png",
+    "img/Pasted image 20240819234056.png.md",
+    "img/Pasted image 20240819234056.png",
+    "Pasted image 20240819234056.png",
+    "Layered Protocol 1.pdf",
+    "Layered Protocol 1.md",
+    "QUESTIONS (I).md",
+    "appointment-scheduling-decision-table.md",
+    "Code.md",
+    "hospital-management-system-srs(1).md",
+    "img/Pasted image 20240829014441.png",
+    "hospital-management-system-srs.md",
+    "img/Pasted image 20240829020113.png",
+    "img/Pasted image 20240829020100.png",
+    "img/Pasted image 20240829014840.png",
+    "img/Pasted image 20240829014605.png",
     "Untitled 1.md",
     "img/Pasted image 20240828114121.png",
     "UNIT I",
-    "img/Pasted image 20240828115529.png",
-    "img/Pasted image 20240828114330.png",
-    "img/Pasted image 20240828114155.png",
-    "img/Pasted image 20240828114146.png",
     "UNIT II",
     "templates/template.md",
     "templates",
@@ -198,13 +192,6 @@
     "Introduction/Protocol Layering.md",
     "Introduction/TCP IP PROTOCOL SUITE.md",
     "Application Layer/Electronic Mail.md",
-    "Data Communications/Problem_and_Solution_from_Chapter_1(1).pdf",
-    "Application Layer/DNS.md",
-    "Application Layer/Client-Server Paradigm.md",
-    "Application Layer/World Wide Web and HTTP.md",
-    "Introduction",
-    "img",
-    "Application Layer",
-    "Data Communications"
+    "Data Communications/Problem_and_Solution_from_Chapter_1(1).pdf"
   ]
 }
