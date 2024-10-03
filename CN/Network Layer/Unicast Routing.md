@@ -147,7 +147,8 @@ Consider a simple scenario with nodes **A**, **B**, and **X**:
    - The LSDB is represented as a **two-dimensional matrix**, where each cell corresponds to the cost of the link between two nodes. 
 	   - If the cost is infinity, the link is either broken or doesn't exist.
 	   ![[Pasted image 20240928233716.png]]
-##### Flooding and Link-State Packets (LSP)
+#### To create graph (LSDB)
+##### 1. Flooding and Link-State Packets (LSP)
    - To build the LSDB, each node sends out **Link-State Packets (LSPs)** to its direct neighbors.
    - The LSP contains two key pieces of information: 
      1. The **identity** of the neighboring node.
@@ -157,10 +158,7 @@ Consider a simple scenario with nodes **A**, **B**, and **X**:
      - A node compares any incoming LSP with its current copy. *If the incoming LSP is newer (determined by sequence numbers), it keeps the new LSP and discards the older one.*
      - The LSP is then forwarded to all other neighbors (except the one from which it was received), ensuring that the LSP spreads throughout the network.
    - This process stops when nodes with only one connection receive the LSPs, and eventually, every node will have the full set of LSPs required to build the LSDB.
-#### Comparison with Distance-Vector Routing
-   - **Distance-Vector Routing:** In this algorithm, each router informs its **neighbors** about what it knows regarding the whole network.
-   - **Link-State Routing:** Each router informs the **entire network** about what it knows about its **neighbors**.
-#### Formation of Least-Cost Trees (Using Dijkstra's Algorithm):
+##### 2. Formation of Least-Cost Trees (Using Dijkstra's Algorithm):
 - Once a node has built its LSDB, it can create a **least-cost tree** using the **Dijkstra Algorithm** to find the shortest paths from a source node to all other nodes in the network.
 1. **Initialization:**
 	- The node begins by creating a tree with just itself and sets the cost to its direct neighbors.	
@@ -169,7 +167,12 @@ Consider a simple scenario with nodes **A**, **B**, and **X**:
 	- After adding that node to the tree, it checks if the addition of that node provides a cheaper route to other nodes. If so, it updates the costs for those nodes.
 3. **Repeat:**
 	- This continues until the tree contains all nodes in the network, ensuring that the **least-cost paths** to every node have been identified.
+	
 ![[Pasted image 20240928234928.png]]
+#### Comparison with Distance-Vector Routing
+   - **Distance-Vector Routing:** In this algorithm, each router informs its **neighbors** about what it knows regarding the whole network.
+   - **Link-State Routing:** Each router informs the **entire network** about what it knows about its **neighbors** (flooding).
+   ![[Pasted image 20240929231309.png]]
 #### Advantages of Link-State Routing:
 1. **Accuracy:** Each node has a full view of the network, which leads to more accurate and reliable routing decisions compared to distance-vector routing.
 2. **Fast Convergence:** Changes in the network (e.g., broken links) propagate quickly, as all nodes receive updated LSPs and can recompute their least-cost trees immediately.

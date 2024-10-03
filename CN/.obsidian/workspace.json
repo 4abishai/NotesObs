@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "077f2961c8bb5a28",
+        "id": "2ce0d2bca2a8ab00",
         "type": "tabs",
         "children": [
           {
-            "id": "76924d152b8af493",
+            "id": "ba9a3b279adb4dbb",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "img/Pasted image 20240928121909.png"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -46,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mtu",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "img/Pasted image 20240928121909.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "img/Pasted image 20240928121909.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "img/Pasted image 20240928121909.png"
-              }
+              "state": {}
             }
           }
         ]
@@ -144,23 +138,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "05e48e2acdd8edba",
+  "active": "ba9a3b279adb4dbb",
   "lastOpenFiles": [
-    "Network Layer/Unicast Routing.md",
-    "img/Pasted image 20240928235037.png",
-    "img/Pasted image 20240928234928.png",
-    "img/Pasted image 20240928233716.png",
-    "img/Pasted image 20240928233633.png",
-    "img/Pasted image 20240928210757.png",
-    "img/Pasted image 20240928205842.png",
-    "img/Pasted image 20240928150241.png",
-    "img/Pasted image 20240928145620.png",
-    "img/Pasted image 20240928140744.png",
-    "img/Pasted image 20240928140721.png",
-    "Network Layer/Packet Switching.md",
-    "Network Layer/ICMPv4.md",
+    "img/Pasted image 20241003204354.png",
+    "img/Pasted image 20241003204416.png",
+    "Network Layer/Questions.md",
+    "img/Pasted image 20241003204410.png",
+    "img/Pasted image 20241003204404.png",
+    "img/Pasted image 20241002231201.png",
     "Network Layer/IPv4.md",
+    "Network Layer/Unicast Routing.md",
+    "Network Layer/Unicast Routing Protocols.md",
+    "img/Pasted image 20241002214353.png",
+    "img/Pasted image 20241002214327.png",
+    "img/Pasted image 20241002214317.png",
+    "img/Pasted image 20241002214301.png",
+    "img/Pasted image 20241002214209.png",
+    "questions",
+    "Network Layer/ICMPv4.md",
     "Network Layer/NAT.md",
+    "Network Layer/Packet Switching.md",
     "Network Layer/DHCP.md",
     "Network Layer/Introduction to Network Layer services.md",
     "Introduction/Protocol Layering.md",
